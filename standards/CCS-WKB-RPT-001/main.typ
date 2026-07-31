@@ -1,4 +1,4 @@
-#import "../../framework/document-types/workbook.typ": workbook
+#import "../../framework/framework.typ": *
 #import "metadata.typ": document
 
 #show: body => workbook(document, body)
