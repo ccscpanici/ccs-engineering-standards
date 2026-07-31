@@ -2,8 +2,133 @@
 
 == Acronyms
 
-== References
+#table(
+  columns: (1.4in, 1fr),
+  inset: 7pt,
+  stroke: 0.5pt,
 
-== Example Reports
+  table.header(
+    [*Acronym*],
+    [*Definition*],
+  ),
 
-== Revision History
+  [PLC], [Programmable Logic Controller],
+  [HMI], [Human-Machine Interface],
+  [SCADA], [Supervisory Control and Data Acquisition],
+  [SQL], [Structured Query Language],
+  [MES], [Manufacturing Execution System],
+  [ERP], [Enterprise Resource Planning],
+  [LIMS], [Laboratory Information Management System],
+  [QA], [Quality Assurance],
+  [CIP], [Clean-In-Place],
+  [HTST], [High Temperature Short Time],
+)
+
+== Reference Documents
+
+#table(
+  columns: (2.3in, 1.2in, 1fr),
+  inset: 7pt,
+  stroke: 0.5pt,
+
+  table.header(
+    [*Document*],
+    [*Revision*],
+    [*Notes*],
+  ),
+
+  [], [], [],
+  [], [], [],
+  [], [], [],
+  [], [], [],
+)
+
+== Existing Reports Provided by Customer
+
+Have sample reports been provided?
+
+- [ ] Yes
+- [ ] No
+
+If yes, list the attached reports.
+
+#box(
+  width: 100%,
+  height: 1.2in,
+  stroke: 0.5pt,
+  inset: 8pt,
+)[]
+
+== Open Questions
+
+List any questions that remain unresolved before implementation begins.
+
+#box(
+  width: 100%,
+  height: 2in,
+  stroke: 0.5pt,
+  inset: 8pt,
+)[]
+
+== Action Items
+
+#table(
+  columns: (0.6in, 3.6in, 1.5in, 1in),
+  inset: 7pt,
+  stroke: 0.5pt,
+
+  table.header(
+    [*ID*],
+    [*Action Item*],
+    [*Owner*],
+    [*Status*],
+  ),
+
+  [AI-001], [], [], [],
+  [AI-002], [], [], [],
+  [AI-003], [], [], [],
+  [AI-004], [], [], [],
+  [AI-005], [], [], [],
+)
+
+== Customer Approval
+
+This workbook represents the agreed reporting requirements for the project.
+
+Changes requested after approval may require additional engineering effort and may affect project schedule and cost.
+
+#v(0.25in)
+
+#table(
+  columns: (2.8in, 2.8in),
+  inset: 8pt,
+  stroke: none,
+
+  [
+    #line(length: 100%, stroke: 0.6pt)
+
+    Customer Representative
+  ],
+
+  [
+    #line(length: 100%, stroke: 0.6pt)
+
+    Complete Control Solutions
+  ],
+
+  [
+    Date:
+
+    #v(0.18in)
+
+    #line(length: 100%, stroke: 0.6pt)
+  ],
+
+  [
+    Date:
+
+    #v(0.18in)
+
+    #line(length: 100%, stroke: 0.6pt)
+  ],
+)
