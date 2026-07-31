@@ -1,33 +1,32 @@
 # CCS Engineering Publishing Framework
 
-The CCS Engineering Publishing Framework is a reusable Typst framework for
-creating professional engineering standards, specifications, worksheets,
-acceptance tests, and customer documentation.
+A reusable Typst framework for creating professional industrial automation documentation.
 
 ## Features
 
-- Metadata-driven documents
+- Workbook document type
+- Functional Design Document document type
 - Automatic cover pages
-- Document information pages
-- Automatic table of contents
-- Automatic page numbering
-- Running headers and footers
-- CCS worksheet tables
-- Engineering callouts
-- Reusable forms
-- Checklists
+- Metadata-driven documents
+- Table of contents
 - Revision history
-- Signature blocks
+- Engineering callouts
+- Checklists
+- Forms
+- Worksheet tables
+
+## Quick Start
+
+...
+
+## Documentation
+
+- [Getting Started](docs/GETTING_STARTED.md)
+- [Component Catalog](docs/COMPONENTS.md)
+- [Roadmap](ROADMAP.md)
+- [Changelog](CHANGELOG.md)
 
 ## Included Standards
 
-- CCS-STD-RPT-001 – Reporting Requirements Workbook
-
-## Roadmap
-
-- Functional Design Specification
-- Software Design Specification
-- Factory Acceptance Test
-- Site Acceptance Test
-- PLC Programming Standard
-- HMI Design Standard
+- CCS-WKB-RPT-001
+- CCS-FDD-RPT-001

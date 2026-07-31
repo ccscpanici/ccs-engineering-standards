@@ -4,6 +4,7 @@
 #import "components/checklist.typ": *
 #import "components/forms.typ": *
 #import "components/ccs-tables.typ": *
+#import "components/diagrams.typ": *
 
 #import "layouts/cover.typ": *
 #import "layouts/document-info.typ": *

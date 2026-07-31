@@ -103,3 +103,15 @@ Attach existing reports whenever possible.
     ("003", "Alarm Report", "", ""),
   ),
 )
+
+= Engineering Diagrams
+
+#report-flow(
+  (
+    "PLC",
+    "Ignition",
+    "SQL Server",
+    "PDF Report",
+  ),
+  caption: "High-level reporting data flow",
+)
