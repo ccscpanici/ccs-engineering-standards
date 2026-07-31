@@ -1,0 +1,13 @@
+# Typst
+*.pdf
+
+# Temporary
+*.tmp
+
+# Editor
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
