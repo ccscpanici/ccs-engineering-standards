@@ -1,4 +1,4 @@
-#import "colors.typ": *
+#import "../styles/colors.typ": *
 
 #let cover(document) = [
   #align(center)[
@@ -14,7 +14,7 @@
     #v(0.15in)
 
     #image(
-      "../assets/logos/ccs-logo.svg",
+      "../../assets/logos/ccs-logo.svg",
       width: 2.8in,
     )
 

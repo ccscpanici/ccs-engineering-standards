@@ -1,7 +1,7 @@
-#import "colors.typ": *
-#import "page.typ"
-#import "typography.typ"
-#import "tables.typ": *
-#import "forms.typ": *
-#import "callouts.typ": *
-#import "cover.typ": *
+#import "styles/colors.typ": *
+#import "styles/page.typ"
+#import "styles/typography.typ"
+#import "components/tables.typ": *
+#import "components/callouts.typ": *
+#import "layouts/cover.typ": *
+#import "layouts/document-info.typ": *
