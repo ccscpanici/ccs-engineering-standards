@@ -1,11 +1,22 @@
 #import "../../framework/theme.typ": *
 #import "metadata.typ": document
 
+#show: ccs-standard
+
 #cover(document)
 
 #pagebreak()
 
 #document-info(document)
+
+#pagebreak()
+
+= Table of Contents
+
+#outline(
+  title: none,
+  indent: auto,
+)
 
 #pagebreak()
 
