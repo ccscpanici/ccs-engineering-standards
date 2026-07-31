@@ -1,9 +1,11 @@
 #import "../../framework/framework.typ": *
+#import "sections/01-introduction.typ": introduction
 #import "metadata.typ": document
 
 #show: body => specification(document, body)
 
-#include "sections/01-introduction.typ"
+#introduction()
+
 #include "sections/02-system-overview.typ"
 #include "sections/03-technical-architecture.typ"
 #include "sections/04-plc-interface.typ"
