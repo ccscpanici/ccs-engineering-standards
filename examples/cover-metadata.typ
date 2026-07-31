@@ -7,4 +7,13 @@
   author: "Chris Panici",
   revision: "1.0",
   date: "July 31, 2026",
+
+  revisions: (
+    (
+      revision: "1.0",
+      date: "July 31, 2026",
+      author: "Chris Panici",
+      description: "Initial release",
+    ),
+  ),
 )

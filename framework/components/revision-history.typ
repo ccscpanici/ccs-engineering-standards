@@ -21,9 +21,11 @@
       ],
     ),
 
-    [#document.revision],
-    [#document.date],
-    [#document.author],
-    [Initial release],
+    ..document.revisions.map(entry => (
+      [#entry.revision],
+      [#entry.date],
+      [#entry.author],
+      [#entry.description],
+    )).flatten(),
   )
 ]
