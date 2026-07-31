@@ -1,15 +1,34 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-documents=(
-  "examples/showcase.typ"
-  "standards/CCS-WKB-RPT-001/main.typ"
-  "standards/CCS-FDD-RPT-001/main.typ"
+echo "Building examples..."
+
+while IFS= read -r source; do
+  echo "  ${source}"
+  ./build.sh "${source}"
+done < <(
+  find examples \
+    -maxdepth 1 \
+    -type f \
+    -name '*.typ' \
+    ! -name '*-metadata.typ' \
+    | sort
 )
 
-for document in "${documents[@]}"; do
-  echo "Building ${document}"
-  ./build.sh "${document}"
-done
+echo
+echo "Building standards..."
 
+while IFS= read -r source; do
+  echo "  ${source}"
+  ./build.sh "${source}"
+done < <(
+  find standards \
+    -mindepth 2 \
+    -maxdepth 2 \
+    -type f \
+    -name 'main.typ' \
+    | sort
+)
+
+echo
 echo "All documents built successfully."
