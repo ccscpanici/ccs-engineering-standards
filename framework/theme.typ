@@ -7,6 +7,7 @@
 #import "components/section.typ": *
 #import "components/forms.typ": *
 #import "components/checklist.typ": *
+#import "components/figures.typ": *
 
 #import "layouts/cover.typ": *
 #import "layouts/document-info.typ": *

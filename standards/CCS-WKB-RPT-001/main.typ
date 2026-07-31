@@ -1,24 +1,7 @@
-#import "../../framework/theme.typ": *
+#import "../../framework/document-types/workbook.typ": workbook
 #import "metadata.typ": document
 
-#show: body => ccs-standard(document, body)
-
-#cover(document)
-
-#pagebreak()
-
-#document-info(document)
-
-#pagebreak()
-
-= Table of Contents
-
-#outline(
-  title: none,
-  indent: auto,
-)
-
-#pagebreak()
+#show: body => workbook(document, body)
 
 #include "sections/01-introduction.typ"
 #include "sections/02-project-overview.typ"
