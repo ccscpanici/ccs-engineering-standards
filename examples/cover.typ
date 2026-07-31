@@ -1,4 +1,4 @@
-#import "../framework/theme.typ": *
+#import "../framework/framework.typ": *
 #import "cover-metadata.typ": document
 
 #cover(document)

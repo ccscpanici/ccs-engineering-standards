@@ -1,4 +1,4 @@
-#import "../framework/theme.typ": *
+#import "../framework/framework.typ": *
 
 #let document = (
   title: "Framework Component Showcase",
