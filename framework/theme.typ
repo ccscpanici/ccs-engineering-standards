@@ -6,6 +6,7 @@
 #import "components/callouts.typ": *
 #import "components/section.typ": *
 #import "components/forms.typ": *
+#import "components/checklist.typ": *
 
 #import "layouts/cover.typ": *
 #import "layouts/document-info.typ": *

@@ -1,5 +1,6 @@
 #import "../../../framework/components/ccs-tables.typ": worksheet-table
 #import "../../../framework/components/forms.typ": write-space
+#import "../../../framework/components/checklist.typ": checklist
 
 = Report Inventory
 
@@ -9,18 +10,23 @@ This section identifies every report required for the project. Each report liste
 
 Select all report types required for this project.
 
-- [ ] Vessel
-- [ ] CIP
-- [ ] HTST
-- [ ] HTST CIP
-- [ ] Production
-- [ ] Batch
-- [ ] Alarm Summary
-- [ ] Downtime
-- [ ] Quality
-- [ ] Regulatory
-- [ ] Management
-- [ ] Other
+#checklist(
+  (
+    "Vessel",
+    "CIP",
+    "HTST",
+    "HTST CIP",
+    "Production",
+    "Batch",
+    "Alarm Summary",
+    "Downtime",
+    "Quality",
+    "Regulatory",
+    "Management",
+    "Other",
+  ),
+  columns: 2,
+)
 
 == Report Inventory
 
