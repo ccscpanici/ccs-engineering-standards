@@ -60,3 +60,52 @@
     ]
   }
 ]
+
+#let vertical-flow(
+  stages,
+  caption: none,
+) = [
+  #align(center)[
+    #stack(
+      dir: ttb,
+      spacing: 8pt,
+
+      ..stages
+        .enumerate()
+        .map(pair => {
+          let index = pair.first()
+          let stage = pair.last()
+
+          if index == stages.len() - 1 {
+            (flow-node(stage),)
+          } else {
+            (
+              flow-node(stage),
+              [
+                #align(center)[
+                  #text(
+                    size: 22pt,
+                    weight: "bold",
+                    fill: ccs-orange,
+                  )[↓]
+                ]
+              ],
+            )
+          }
+        })
+        .flatten(),
+    )
+  ]
+
+  #if caption != none {
+    v(6pt)
+
+    align(center)[
+      #text(
+        size: 9pt,
+        style: "italic",
+        fill: ccs-dark,
+      )[#caption]
+    ]
+  }
+]

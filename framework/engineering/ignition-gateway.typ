@@ -1,4 +1,4 @@
-#import "info-panel.typ": info-panel
+#import "../components/info-panel.typ": info-panel
 
 #let ignition-gateway(
   name: "Primary Gateway",

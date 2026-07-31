@@ -5,9 +5,12 @@
 #import "components/forms.typ": *
 #import "components/ccs-tables.typ": *
 #import "components/diagrams.typ": *
-#import "components/engineering.typ": *
-#import "components/controller.typ": *
-#import "components/ignition-gateway.typ": *
+
+#import "engineering/engineering.typ": *
+#import "engineering/controller.typ": *
+#import "engineering/ignition-gateway.typ": *
+#import "engineering/sql-server.typ": *
+#import "engineering/report-definition.typ": *
 
 #import "layouts/cover.typ": *
 #import "layouts/document-info.typ": *

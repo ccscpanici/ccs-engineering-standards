@@ -1,4 +1,4 @@
-#import "diagrams.typ": report-flow
+#import "../components/diagrams.typ": report-flow, vertical-flow
 
 #let reporting-system(
   controller: "PLC Control System",
@@ -13,6 +13,22 @@
       gateway,
       database,
       reporting,
+    ),
+    caption: caption,
+  )
+}
+
+#let qa-workflow(
+  pending: "QA Review Pending",
+  hold: "QA Hold",
+  approved: "QA Approved",
+  caption: "QA report review workflow",
+) = {
+  vertical-flow(
+    (
+      pending,
+      hold,
+      approved,
     ),
     caption: caption,
   )

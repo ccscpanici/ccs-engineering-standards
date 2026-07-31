@@ -6,7 +6,7 @@
 #import "sections/05-ignition-design.typ": ignition-design
 #import "sections/06-database-design.typ": database-design
 #import "sections/07-report-design.typ": report-design
-#import "sections/08-qa-workflow.typ": qa-workflow
+#import "sections/08-qa-workflow.typ": qa-workflow-section
 #import "sections/09-security.typ": security
 #import "sections/10-acceptance-criteria.typ": acceptance-criteria
 #import "sections/11-appendix.typ": appendix
@@ -22,7 +22,7 @@
 #ignition-design()
 #database-design()
 #report-design()
-#qa-workflow()
+#qa-workflow-section()
 #security()
 #acceptance-criteria()
 #appendix()

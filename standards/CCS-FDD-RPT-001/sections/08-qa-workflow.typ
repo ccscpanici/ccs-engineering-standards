@@ -1,4 +1,6 @@
-#let qa-workflow() = [
+#import "../../../framework/framework.typ": qa-workflow
+
+#let qa-workflow-section() = [
     
   = QA Workflow
 
@@ -29,9 +31,7 @@
 
   Reports progress through the following QA states:
 
-  1. QA Review Pending
-  2. QA Hold
-  3. QA Approved
+  #qa-workflow()
 
   Each report shall always have one current QA status.
 

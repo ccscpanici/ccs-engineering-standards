@@ -145,3 +145,36 @@ Attach existing reports whenever possible.
     transaction groups, report generation, and client services.
   ],
 )
+
+== SQL Server
+
+#sql-server(
+  name: "Reporting Database",
+  version: "SQL Server 2022",
+  database: "Reporting",
+  authentication: "Windows Authentication",
+  backup: "Nightly",
+
+  description: [
+    Stores production, QA, audit trail, and reporting information.
+    Provides historical data for reporting services.
+  ],
+)
+
+== Report Definition
+
+#report-definition(
+  name: "CIP Report",
+  id: "RPT-002",
+  process-area: "CIP System",
+  trigger: "CIP Cycle Complete",
+  frequency: "Per Cycle",
+  owner: "Quality Assurance",
+  approval: "QA Approval Required",
+  retention: "7 Years",
+
+  description: [
+    Records CIP cycle timing, step progression, process values,
+    operator events, QA annotations, and final approval status.
+  ],
+)
