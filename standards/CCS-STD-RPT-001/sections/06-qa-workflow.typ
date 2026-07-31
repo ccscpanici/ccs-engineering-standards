@@ -1,3 +1,4 @@
+#import "../../../framework/components/forms.typ": write-space
 = QA Workflow
 
 This section defines the review, hold, approval, annotation, and audit requirements for reports that require quality assurance oversight.
@@ -11,12 +12,7 @@ Do reports require QA review?
 
 Which report types require QA review?
 
-#box(
-  width: 100%,
-  height: 0.9in,
-  stroke: 0.5pt,
-  inset: 8pt,
-)[]
+#write-space(height: 0.9in)
 
 == QA Statuses
 
@@ -33,12 +29,7 @@ Should any additional QA statuses be supported?
 
 If yes, describe them.
 
-#box(
-  width: 100%,
-  height: 0.8in,
-  stroke: 0.5pt,
-  inset: 8pt,
-)[]
+#write-space(height: 0.8in)
 
 == QA Approval Authority
 
@@ -91,12 +82,7 @@ Should reports on hold be restricted from distribution or export?
 
 What must occur before a report can be marked QA Approved?
 
-#box(
-  width: 100%,
-  height: 1in,
-  stroke: 0.5pt,
-  inset: 8pt,
-)[]
+#write-space(height: 1.0in)
 
 Should QA approval require user authentication?
 
@@ -157,12 +143,7 @@ Can report data be changed after QA approval?
 
 If yes, describe the required workflow.
 
-#box(
-  width: 100%,
-  height: 1in,
-  stroke: 0.5pt,
-  inset: 8pt,
-)[]
+#write-space(height: 1.0in)
 
 Should changes after approval require:
 
@@ -220,12 +201,7 @@ Select all applicable requirements.
 
 Describe any applicable standards or policies.
 
-#box(
-  width: 100%,
-  height: 1in,
-  stroke: 0.5pt,
-  inset: 8pt,
-)[]
+#write-space(height: 1.0in)
 
 == Notifications
 
@@ -240,18 +216,8 @@ Should notifications be generated for QA-related events?
 
 Who should receive these notifications?
 
-#box(
-  width: 100%,
-  height: 0.8in,
-  stroke: 0.5pt,
-  inset: 8pt,
-)[]
+#write-space(height: 0.8in)
 
 == Engineering Notes
 
-#box(
-  width: 100%,
-  height: 1.5in,
-  stroke: 0.5pt,
-  inset: 8pt,
-)[]
+#write-space(height: 1.5in)

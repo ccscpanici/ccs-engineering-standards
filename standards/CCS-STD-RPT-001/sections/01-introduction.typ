@@ -1,3 +1,5 @@
+#import "../../../framework/components/callouts.typ": note, warning, tip
+
 = Introduction
 
 == Purpose
@@ -30,3 +32,11 @@ Each report should...
 - *Data Source* — The origin of the information used within a report.
 - *Approval Workflow* — The process used to review and approve report data.
 - *Revision* — A tracked modification to the report specification.
+
+#note[
+If a question does not apply to the project, leave it blank or mark it as not applicable.
+]
+
+#tip[
+Attach existing reports, screenshots, spreadsheets, and paper forms whenever possible.
+]

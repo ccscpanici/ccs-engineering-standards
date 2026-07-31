@@ -1,3 +1,6 @@
+#import "../../../framework/components/ccs-tables.typ": worksheet-table
+#import "../../../framework/components/forms.typ": write-space
+
 = Report Inventory
 
 This section identifies every report required for the project. Each report listed here should have a corresponding Report Specification Worksheet completed in Section 4.
@@ -21,30 +24,30 @@ Select all report types required for this project.
 
 == Report Inventory
 
-#table(
-  columns: (0.85in, 1.7in, 1.4in, 1.1in, 1.2in, 1fr),
-  inset: 6pt,
-  stroke: 0.5pt,
+#worksheet-table(
+  (0.85in, 1.7in, 1.4in, 1.1in, 1.2in, 1fr),
 
-  table.header(
-    [*Report ID*],
-    [*Report Name*],
-    [*Process Area*],
-    [*Frequency*],
-    [*Primary Users*],
-    [*Status*],
+  (
+    "Report ID",
+    "Report Name",
+    "Process Area",
+    "Frequency",
+    "Primary Users",
+    "Status",
   ),
 
-  [RPT-001], [], [], [], [], [],
-  [RPT-002], [], [], [], [], [],
-  [RPT-003], [], [], [], [], [],
-  [RPT-004], [], [], [], [], [],
-  [RPT-005], [], [], [], [], [],
-  [RPT-006], [], [], [], [], [],
-  [RPT-007], [], [], [], [], [],
-  [RPT-008], [], [], [], [], [],
-  [RPT-009], [], [], [], [], [],
-  [RPT-010], [], [], [], [], [],
+  (
+    ("RPT-001", "", "", "", "", ""),
+    ("RPT-002", "", "", "", "", ""),
+    ("RPT-003", "", "", "", "", ""),
+    ("RPT-004", "", "", "", "", ""),
+    ("RPT-005", "", "", "", "", ""),
+    ("RPT-006", "", "", "", "", ""),
+    ("RPT-007", "", "", "", "", ""),
+    ("RPT-008", "", "", "", "", ""),
+    ("RPT-009", "", "", "", "", ""),
+    ("RPT-010", "", "", "", "", ""),
+  ),
 )
 
 == Report Frequency
@@ -86,9 +89,4 @@ Attach examples of existing reports whenever possible.
 
 == Engineering Notes
 
-#box(
-  width: 100%,
-  height: 1.5in,
-  stroke: 0.5pt,
-  inset: 8pt,
-)[]
+#write-space(height: 1.5in)

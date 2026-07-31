@@ -1,3 +1,4 @@
+#import "../../../framework/components/forms.typ": write-space
 = Report Specification Worksheet
 
 Complete one copy of this worksheet for each report identified in Section 3.
@@ -22,12 +23,7 @@ Complete one copy of this worksheet for each report identified in Section 3.
 
 Describe why this report is required and what business or operational decision it supports.
 
-#box(
-  width: 100%,
-  height: 1.25in,
-  stroke: 0.5pt,
-  inset: 8pt,
-)[]
+#write-space()
 
 == Users
 
@@ -65,12 +61,7 @@ How is the report created?
 
 List all information that must appear on the report.
 
-#box(
-  width: 100%,
-  height: 1.5in,
-  stroke: 0.5pt,
-  inset: 8pt,
-)[]
+#write-space(height: 1.5in)
 
 == Calculations
 
@@ -81,12 +72,7 @@ Does the report require calculated values?
 
 If yes, describe the required calculations.
 
-#box(
-  width: 100%,
-  height: 1in,
-  stroke: 0.5pt,
-  inset: 8pt,
-)[]
+#write-space(height: 1in)
 
 == Operator Input
 
@@ -97,12 +83,7 @@ Does the report require operator-entered information?
 
 Examples may include comments, product codes, lot numbers, QA notes, downtime reasons, or shift notes.
 
-#box(
-  width: 100%,
-  height: 1in,
-  stroke: 0.5pt,
-  inset: 8pt,
-)[]
+#write-space(height: 1in)
 
 == Approval Workflow
 
@@ -153,18 +134,8 @@ How long must the report be retained?
 
 Describe what conditions must be satisfied before the report is considered complete.
 
-#box(
-  width: 100%,
-  height: 1.25in,
-  stroke: 0.5pt,
-  inset: 8pt,
-)[]
+#write-space(height: 1.25in)
 
 == Engineering Notes
 
-#box(
-  width: 100%,
-  height: 1.25in,
-  stroke: 0.5pt,
-  inset: 8pt,
-)[]
+#write-space(height: 1.25in)

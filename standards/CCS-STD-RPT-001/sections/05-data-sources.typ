@@ -1,3 +1,4 @@
+#import "../../../framework/components/forms.typ": write-space
 = Data Sources
 
 This section identifies the systems, equipment, databases, and manual processes that provide information to the reporting solution.
@@ -126,12 +127,7 @@ Examples may include:
 
 Describe the required manual data entry.
 
-#box(
-  width: 100%,
-  height: 1.25in,
-  stroke: 0.5pt,
-  inset: 8pt,
-)[]
+#write-space()
 
 == Data Quality
 
@@ -148,12 +144,7 @@ Identify any known issues with existing data.
 
 Describe any known concerns.
 
-#box(
-  width: 100%,
-  height: 1.25in,
-  stroke: 0.5pt,
-  inset: 8pt,
-)[]
+#write-space()
 
 == Time Synchronization
 
@@ -165,12 +156,7 @@ Is a network time protocol server available?
 
 NTP server name or IP address:
 
-#box(
-  width: 100%,
-  height: 0.45in,
-  stroke: 0.5pt,
-  inset: 8pt,
-)[]
+#write-space(height: 0.45in)
 
 Should the PLC controllers, Ignition servers, database servers, and operator workstations synchronize to the same time source?
 
@@ -195,18 +181,8 @@ Should historical information be imported into the new reporting system?
 
 Describe the scope of any historical-data migration.
 
-#box(
-  width: 100%,
-  height: 1.25in,
-  stroke: 0.5pt,
-  inset: 8pt,
-)[]
+#write-space()
 
 == Engineering Notes
 
-#box(
-  width: 100%,
-  height: 1.5in,
-  stroke: 0.5pt,
-  inset: 8pt,
-)[]
+#write-space(height: 1.5in)

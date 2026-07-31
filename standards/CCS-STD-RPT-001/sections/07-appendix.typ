@@ -1,3 +1,4 @@
+#import "../../../framework/components/forms.typ": write-space, field, signature-line
 = Appendix
 
 == Acronyms
@@ -52,23 +53,13 @@ Have sample reports been provided?
 
 If yes, list the attached reports.
 
-#box(
-  width: 100%,
-  height: 1.2in,
-  stroke: 0.5pt,
-  inset: 8pt,
-)[]
+#write-space(height: 1.2in)
 
 == Open Questions
 
 List any questions that remain unresolved before implementation begins.
 
-#box(
-  width: 100%,
-  height: 2in,
-  stroke: 0.5pt,
-  inset: 8pt,
-)[]
+#write-space(height: 2in)
 
 == Action Items
 
@@ -99,36 +90,17 @@ Changes requested after approval may require additional engineering effort and m
 
 #v(0.25in)
 
-#table(
-  columns: (2.8in, 2.8in),
-  inset: 8pt,
-  stroke: none,
+#grid(
+  columns: (1fr, 1fr),
+  gutter: 0.35in,
 
   [
-    #line(length: 100%, stroke: 0.6pt)
-
-    Customer Representative
+    #signature-line("Customer Representative")
+    #field("Date", height: 0.35in)
   ],
 
   [
-    #line(length: 100%, stroke: 0.6pt)
-
-    Complete Control Solutions
-  ],
-
-  [
-    Date:
-
-    #v(0.18in)
-
-    #line(length: 100%, stroke: 0.6pt)
-  ],
-
-  [
-    Date:
-
-    #v(0.18in)
-
-    #line(length: 100%, stroke: 0.6pt)
+    #signature-line("Complete Control Solutions")
+    #field("Date", height: 0.35in)
   ],
 )

@@ -1,3 +1,4 @@
+#import "../../../framework/components/forms.typ": write-space
 = Project Overview
 
 This section provides a high-level description of the facility, process, and project objectives. The information collected here establishes the context for the reporting system and helps Complete Control Solutions understand how reporting supports plant operations.
@@ -46,12 +47,7 @@ Consider including:
 - Number of operators
 - Approximate number of report users
 
-#box(
-  width: 100%,
-  height: 1.5in,
-  stroke: 0.5pt,
-  inset: 8pt,
-)[]
+#write-space(height: 1.5in)
 
 == Process Overview
 
@@ -68,12 +64,7 @@ Examples may include:
 - Warehouse operations
 - Wastewater treatment
 
-#box(
-  width: 100%,
-  height: 1.75in,
-  stroke: 0.5pt,
-  inset: 8pt,
-)[]
+#write-space(height: 1.75in)
 
 == Business Objectives
 
@@ -105,18 +96,8 @@ Examples may include:
 - Improved production visibility
 - Standardized reporting across multiple facilities
 
-#box(
-  width: 100%,
-  height: 1.5in,
-  stroke: 0.5pt,
-  inset: 8pt,
-)[]
+#write-space(height: 1.5in)
 
 == Engineering Notes
 
-#box(
-  width: 100%,
-  height: 1.5in,
-  stroke: 0.5pt,
-  inset: 8pt,
-)[]
+#write-space(height: 1.5in)

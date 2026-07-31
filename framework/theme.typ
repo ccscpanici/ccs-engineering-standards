@@ -2,9 +2,10 @@
 #import "styles/page.typ": *
 #import "styles/typography.typ"
 
-#import "components/tables.typ": *
+#import "components/ccs-tables.typ": *
 #import "components/callouts.typ": *
 #import "components/section.typ": *
+#import "components/forms.typ": *
 
 #import "layouts/cover.typ": *
 #import "layouts/document-info.typ": *
