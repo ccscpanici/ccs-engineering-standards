@@ -6,6 +6,8 @@
 #import "components/ccs-tables.typ": *
 #import "components/diagrams.typ": *
 #import "components/engineering.typ": *
+#import "components/controller.typ": *
+#import "components/ignition-gateway.typ": *
 
 #import "layouts/cover.typ": *
 #import "layouts/document-info.typ": *

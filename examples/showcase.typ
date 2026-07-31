@@ -115,3 +115,33 @@ Attach existing reports whenever possible.
   ),
   caption: "High-level reporting data flow",
 )
+
+== Controller Information
+
+#controller(
+  name: "Primary PLC",
+  model: "1756-L85E",
+  firmware: "38.011",
+  network: "EtherNet/IP",
+  ip: "10.0.1.10",
+
+  description: [
+    Primary process controller responsible for report triggering,
+    production-state monitoring, and communications with Ignition.
+  ],
+)
+
+== Ignition Gateway
+
+#ignition-gateway(
+  name: "Primary Gateway",
+  version: "8.3.0",
+  redundancy: "Enabled",
+  tag-provider: "Production",
+  database: "Reporting",
+
+  description: [
+    Primary Ignition gateway responsible for data collection,
+    transaction groups, report generation, and client services.
+  ],
+)
