@@ -1,4 +1,5 @@
 #import "../../../framework/components/forms.typ": write-space, field, signature-line
+#import "../../../framework/components/checklist.typ": checklist
 = Appendix
 
 == Acronyms
@@ -48,8 +49,13 @@
 
 Have sample reports been provided?
 
-- [ ] Yes
-- [ ] No
+#checklist(
+  (
+    "Yes",
+    "No"
+  ),
+  columns: 2
+)
 
 If yes, list the attached reports.
 

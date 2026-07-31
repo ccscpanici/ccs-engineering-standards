@@ -1,4 +1,5 @@
 #import "../../../framework/components/forms.typ": write-space
+#import "../../../framework/components/checklist.typ": checklist
 = Project Overview
 
 This section provides a high-level description of the facility, process, and project objectives. The information collected here establishes the context for the reporting system and helps Complete Control Solutions understand how reporting supports plant operations.
@@ -70,17 +71,22 @@ Examples may include:
 
 Select all applicable reasons for implementing the reporting system.
 
-- [ ] Replace paper reports
-- [ ] Improve operator efficiency
-- [ ] Improve product traceability
-- [ ] Reduce manual data entry
-- [ ] Improve regulatory compliance
-- [ ] Improve production visibility
-- [ ] Improve quality reporting
-- [ ] Support management reporting
-- [ ] Improve troubleshooting
-- [ ] Satisfy customer reporting requirements
-- [ ] Other
+#checklist(
+  (
+    "Replace paper reports",
+    "Improve operator efficiency",
+    "Improve product traceability",
+    "Reduct manual data entry",
+    "Improve regulatory compliance",
+    "Improve production visibility",
+    "Improve quality reporting",
+    "Support management reporting",
+    "Improve troubleshooting",
+    "Satisfy customer reporting requirements",
+    "Other"
+  ),
+  columns: 2
+)
 
 == Success Criteria
 

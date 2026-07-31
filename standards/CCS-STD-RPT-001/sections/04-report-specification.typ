@@ -1,4 +1,5 @@
 #import "../../../framework/components/forms.typ": write-space
+#import "../../../framework/components/checklist.typ": checklist
 = Report Specification Worksheet
 
 Complete one copy of this worksheet for each report identified in Section 3.
@@ -29,33 +30,42 @@ Describe why this report is required and what business or operational decision i
 
 Select all users who will access or rely on this report.
 
-- [ ] Operator
-- [ ] Supervisor
-- [ ] Quality Assurance
-- [ ] Maintenance
-- [ ] Engineering
-- [ ] Plant Management
-- [ ] Corporate
-- [ ] Customer
-- [ ] Regulatory agency
-- [ ] Other
+#checklist(
+  (
+    "Operator",
+    "Supervisor",
+    "Quality Assurance",
+    "Maintenance",
+    "Engineering",
+    "Corporate",
+    "Customer",
+    "Regulatory agency",
+    "Other"
+  ),
+  columns: 2
+)
 
 == Report Trigger
 
 How is the report created?
 
-- [ ] Automatic
-- [ ] Manual
-- [ ] Scheduled
-- [ ] Batch complete
-- [ ] CIP complete
-- [ ] Production run complete
-- [ ] Shift end
-- [ ] Daily
-- [ ] Weekly
-- [ ] Monthly
-- [ ] Alarm or event
-- [ ] Other
+#checklist(
+  (
+    "Automatic",
+    "Manual",
+    "Scheduled",
+    "Batch Complete",
+    "CIP Complete",
+    "Production run complete",
+    "Shift end",
+    "Daily",
+    "Weekly",
+    "Monthly",
+    "Alarm or event",
+    "Other"
+  ),
+  columns: 2
+)
 
 == Report Contents
 
@@ -78,8 +88,13 @@ If yes, describe the required calculations.
 
 Does the report require operator-entered information?
 
-- [ ] No
-- [ ] Yes
+#checklist(
+  (
+    "No",
+    "Yes"
+  ),
+  columns: 2
+)
 
 Examples may include comments, product codes, lot numbers, QA notes, downtime reasons, or shift notes.
 
@@ -89,46 +104,66 @@ Examples may include comments, product codes, lot numbers, QA notes, downtime re
 
 Is approval required?
 
-- [ ] No
-- [ ] Yes
+#checklist(
+  (
+    "No",
+    "Yes"
+  ), 
+  columns: 2
+)
 
 If yes, select the required approval steps.
 
-- [ ] Operator review
-- [ ] Supervisor approval
-- [ ] QA approval
-- [ ] Electronic signature
-- [ ] Second approval
-- [ ] Customer approval
+#checklist(
+  (
+    "Operator review",
+    "Supervisor approval",
+    "QA approval",
+    "Electronic signature",
+    "Second approval",
+    "Customer approval"
+  ),
+  columns: 2
+)
 
 == Report Distribution
 
 Select all required output or distribution methods.
 
-- [ ] Printed copy
-- [ ] PDF
-- [ ] Email
-- [ ] SQL archive
-- [ ] SharePoint
-- [ ] ERP
-- [ ] Customer portal
-- [ ] File server
-- [ ] Other
+#checklist(
+  (
+    "Printed Copy",
+    "PDF",
+    "Email",
+    "SQL Archive",
+    "Sharepoint",
+    "ERP",
+    "Customer portal",
+    "File server",
+    "Other"
+  ),
+  columns: 2
+)
 
 == Retention Requirements
 
 How long must the report be retained?
 
-- [ ] Less than 30 days
-- [ ] 30 days
-- [ ] 90 days
-- [ ] 1 year
-- [ ] 3 years
-- [ ] 5 years
-- [ ] 7 years
-- [ ] 10 years
-- [ ] Permanently
-- [ ] Other
+#checklist(
+  (
+    "Less than 30 days",
+    "30 days",
+    "90 days",
+    "1 year",
+    "3 years",
+    "5 years",
+    "7 years",
+    "10 years",
+    "Permanently",
+    "Other"
+  ),
+  columns: 2
+)
 
 == Acceptance Criteria
 

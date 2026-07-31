@@ -1,4 +1,5 @@
 #import "../../../framework/components/forms.typ": write-space
+#import "../../../framework/components/checklist.typ": checklist
 = QA Workflow
 
 This section defines the review, hold, approval, annotation, and audit requirements for reports that require quality assurance oversight.
@@ -7,8 +8,13 @@ This section defines the review, hold, approval, annotation, and audit requireme
 
 Do reports require QA review?
 
-- [ ] Yes
-- [ ] No
+#checklist(
+  (
+    "Yes",
+    "No"
+  ),
+  columns: 2
+)
 
 Which report types require QA review?
 
@@ -24,8 +30,13 @@ The reporting system shall support the following QA statuses where QA review is 
 
 Should any additional QA statuses be supported?
 
-- [ ] Yes
-- [ ] No
+#checklist(
+  (
+    "Yes",
+    "No"
+  ),
+  columns: 2
+)
 
 If yes, describe them.
 
@@ -56,27 +67,47 @@ Identify the personnel or roles authorized to review and approve reports.
 
 Should QA personnel be able to place a report on hold?
 
-- [ ] Yes
-- [ ] No
+#checklist(
+  (
+    "Yes",
+    "No"
+  ),
+  columns: 2
+)
 
 If a report is placed on hold, what information must be recorded?
 
-- [ ] Hold reason
-- [ ] User name
-- [ ] Date and time
-- [ ] Corrective action
-- [ ] Supporting documentation
-- [ ] Other
+#checklist(
+  (
+    "Hold reason",
+    "User name",
+    "Date and time",
+    "Corrective action",
+    "Supporting documentation",
+    "Other"
+  ),
+  columns: 2
+)
 
 Should a report remain visible to operators while it is on hold?
 
-- [ ] Yes
-- [ ] No
+#checklist(
+  (
+    "Yes",
+    "No"
+  ),
+  columns: 2
+)
 
 Should reports on hold be restricted from distribution or export?
 
-- [ ] Yes
-- [ ] No
+#checklist(
+  (
+    "Yes",
+    "No"
+  ),
+  columns: 2
+)
 
 == QA Approval
 
@@ -86,60 +117,105 @@ What must occur before a report can be marked QA Approved?
 
 Should QA approval require user authentication?
 
-- [ ] Yes
-- [ ] No
+#checklist(
+  (
+    "Yes",
+    "No"
+  ),
+  columns: 2
+)
 
 Should QA approval require an electronic signature?
 
-- [ ] Yes
-- [ ] No
+#checklist(
+  (
+    "Yes",
+    "No"
+  ),
+  columns: 2
+)
 
 Should approval record the following information?
 
-- [ ] Approver name
-- [ ] Approval date and time
-- [ ] Approval status
-- [ ] Approval comments
-- [ ] Electronic signature
-- [ ] Other
+#checklist(
+  (
+    "Approver name",
+    "Approval date and time",
+    "Approval status",
+    "Approval comment",
+    "Electronic signature",
+    "Other"
+  ),
+  columns: 2
+)
 
 == Post-Generation Annotations
 
 Should users be able to add annotations after a report is generated?
 
-- [ ] Yes
-- [ ] No
+#checklist(
+  (
+    "Yes",
+    "No"
+  ),
+  columns: 2
+)
 
 Who may add annotations?
 
-- [ ] Operator
-- [ ] Supervisor
-- [ ] Quality Assurance
-- [ ] Engineering
-- [ ] Administrator
-- [ ] Other
+#checklist(
+  (
+    "Operator",
+    "Supervisor",
+    "Quality Assurance",
+    "Engineering",
+    "Administrator",
+    "Other"
+  ),
+  columns: 2
+)
 
 Should annotations become a permanent part of the report history?
 
-- [ ] Yes
-- [ ] No
+#checklist(
+  (
+    "Yes",
+    "No"
+  ),
+  columns: 2
+)
 
 Can annotations be added after QA approval?
 
-- [ ] Yes
-- [ ] No
+#checklist(
+  (
+    "Yes",
+    "No"
+  ),
+  columns: 2
+)
 
 If an annotation is added after approval, should the report return to QA Review Pending?
 
-- [ ] Yes
-- [ ] No
+#checklist(
+  (
+    "Yes",
+    "No"
+  ),
+  columns: 2
+)
 
 == Report Changes After Approval
 
 Can report data be changed after QA approval?
 
-- [ ] Yes
-- [ ] No
+#checklist(
+  (
+    "Yes",
+    "No"
+  ),
+  columns: 2
+)
 
 If yes, describe the required workflow.
 
@@ -147,33 +223,48 @@ If yes, describe the required workflow.
 
 Should changes after approval require:
 
-- [ ] Reauthentication
-- [ ] QA reapproval
-- [ ] Supervisor approval
-- [ ] Reason for change
-- [ ] Audit-trail entry
-- [ ] Other
+#checklist(
+  (
+    "Reauthentication",
+    "QA reapproval",
+    "Supervisor approval",
+    "Reason for change",
+    "Audit-trail entry",
+    "Other"
+  ),
+  columns: 2
+)
 
 == Audit Trail
 
 Should the system maintain an audit trail of report activity?
 
-- [ ] Yes
-- [ ] No
+#checklist(
+  (
+    "Yes",
+    "No"
+  ),
+  columns: 2
+)
 
 Select the actions that must be recorded.
 
-- [ ] Report creation
-- [ ] Report completion
-- [ ] QA hold
-- [ ] QA approval
-- [ ] Annotation added
-- [ ] Report reopened
-- [ ] Report regenerated
-- [ ] Report exported
-- [ ] Report printed
-- [ ] Report deleted or archived
-- [ ] Other
+#checklist(
+  (
+    "Report creation",
+    "Report completion",
+    "QA hold",
+    "QA approval",
+    "Annotation added",
+    "Report reopened",
+    "Report regenerated",
+    "Report exported",
+    "Report printed",
+    "Report deleted or archived",
+    "Other"
+  ),
+  columns: 2
+)
 
 Each audit-trail entry should include, at minimum:
 
@@ -187,17 +278,27 @@ Each audit-trail entry should include, at minimum:
 
 Are electronic records or signatures subject to regulatory requirements?
 
-- [ ] Yes
-- [ ] No
-- [ ] Unknown
+#checklist(
+  (
+    "Yes",
+    "No",
+    "I don't know"
+  ),
+  columns: 2
+)
 
 Select all applicable requirements.
 
-- [ ] FDA 21 CFR Part 11
-- [ ] Corporate electronic-record policy
-- [ ] Customer-specific requirement
-- [ ] Other regulatory requirement
-- [ ] None
+#checklist(
+  (
+    "FDA 21 CFR Part 11",
+    "Corporate electronic-record policy",
+    "Customer-specific requirement",
+    "Other regulatory requirement",
+    "None"
+  ),
+  columns: 2
+)
 
 Describe any applicable standards or policies.
 
@@ -207,12 +308,17 @@ Describe any applicable standards or policies.
 
 Should notifications be generated for QA-related events?
 
-- [ ] QA review required
-- [ ] Report placed on hold
-- [ ] Report approved
-- [ ] Approval rejected
-- [ ] Annotation added after approval
-- [ ] Other
+#checklist(
+  (
+    "QA review required",
+    "Report placed on hold",
+    "Report approved",
+    "Approval rejected",
+    "Annotation added after approval",
+    "Other"
+  ),
+  columns: 2
+)
 
 Who should receive these notifications?
 

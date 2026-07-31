@@ -1,4 +1,5 @@
 #import "../../../framework/components/forms.typ": write-space
+#import "../../../framework/components/checklist.typ": checklist
 = Data Sources
 
 This section identifies the systems, equipment, databases, and manual processes that provide information to the reporting solution.
@@ -93,26 +94,36 @@ List all PLCs that will provide data for reporting.
 
 Will the reporting system exchange information with other systems?
 
-- [ ] ERP
-- [ ] MES
-- [ ] LIMS
-- [ ] CMMS
-- [ ] Accounting system
-- [ ] SharePoint
-- [ ] Cloud service
-- [ ] REST API
-- [ ] OPC UA
-- [ ] MQTT
-- [ ] CSV import or export
-- [ ] Microsoft Excel
-- [ ] Other
+#checklist(
+  (
+    "ERP",
+    "MES",
+    "LIMS",
+    "CMMS",
+    "Accounting system",
+    "Sharepoint",
+    "Cloud service",
+    "REST API",
+    "OPC UA",
+    "MQTT",
+    "CSV import or export",
+    "Microsoft Excel",
+    "Other"
+  ),
+  columns: 2
+)
 
 == Manual Data Collection
 
 Will operators or other personnel manually enter information?
 
-- [ ] Yes
-- [ ] No
+#checklist(
+  (
+    "Yes",
+    "No"
+  ),
+  columns:2
+)
 
 Examples may include:
 
@@ -133,14 +144,19 @@ Describe the required manual data entry.
 
 Identify any known issues with existing data.
 
-- [ ] Missing values
-- [ ] Duplicate records
-- [ ] Inconsistent naming
-- [ ] Manual calculations
-- [ ] Paper records
-- [ ] Time synchronization issues
-- [ ] Data-entry errors
-- [ ] Unknown
+#checklist(
+  (
+    "Missing values",
+    "Duplicate records",
+    "Inconsistent naming",
+    "Manual calculations",
+    "Paper records",
+    "Time synchronization issues",
+    "Data-entry errors",
+    "Unknown"
+  ),
+  columns: 2
+)
 
 Describe any known concerns.
 
@@ -150,9 +166,14 @@ Describe any known concerns.
 
 Is a network time protocol server available?
 
-- [ ] Yes
-- [ ] No
-- [ ] Unknown
+#checklist(
+  (
+    "Yes",
+    "No",
+    "I don't know"
+  ),
+  columns: 2
+)
 
 NTP server name or IP address:
 
@@ -160,24 +181,39 @@ NTP server name or IP address:
 
 Should the PLC controllers, Ignition servers, database servers, and operator workstations synchronize to the same time source?
 
-- [ ] Yes
-- [ ] No
+#checklist(
+  (
+    "Yes",
+    "No"
+  ),
+  columns: 2
+)
 
 Should time synchronization failures generate an alarm or notification?
 
-- [ ] Yes
-- [ ] No
+#checklist(
+  (
+    "Yes",
+    "No"
+  ),
+  columns: 2
+)
 
 == Historical Data
 
 Should historical information be imported into the new reporting system?
 
-- [ ] Existing SQL database
-- [ ] Historian
-- [ ] Archived reports
-- [ ] Microsoft Excel files
-- [ ] Paper records
-- [ ] No historical data required
+#checklist(
+  (
+    "Existing SQL database",
+    "Historian",
+    "Archived reports",
+    "Microsoft Excel files",
+    "Paper records",
+    "No historical data required"
+  ),
+  columns: 2
+)
 
 Describe the scope of any historical-data migration.
 

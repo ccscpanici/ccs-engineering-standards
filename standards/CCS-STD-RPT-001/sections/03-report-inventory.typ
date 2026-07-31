@@ -60,36 +60,50 @@ Select all report types required for this project.
 
 Indicate how often each report is expected to be generated.
 
-- [ ] Every cycle
-- [ ] Every batch
-- [ ] Every CIP cycle
-- [ ] Every production run
-- [ ] Hourly
-- [ ] Daily
-- [ ] Weekly
-- [ ] Monthly
-- [ ] On demand
-- [ ] Exception only
-- [ ] Other
+#checklist(
+  (
+    "Every cycle",
+    "Every batch",
+    "Every CIP cycle",
+    "Every production run",
+    "Hourly",
+    "Daily",
+    "Weekly",
+    "Monthly",
+    "On demand",
+    "Exception only",
+    "Other"
+),
+  columns: 2
+)
 
 == Existing Reports
 
 Does the facility currently generate reports that should be replaced, recreated, or used as a reference?
 
-- [ ] Yes
-- [ ] No
+#checklist(
+  (
+    "Yes",
+    "No"
+  ),
+  columns: 2
+)
 
 If yes, identify the current report format.
 
-- [ ] Paper forms
-- [ ] Microsoft Excel
-- [ ] PDF
-- [ ] SQL reporting tool
-- [ ] SCADA reporting
-- [ ] Historian reporting
-- [ ] ERP
-- [ ] MES
-- [ ] Other
+#checklist(
+  (
+    "Paper Forms",
+    "Microsoft Excel",
+    "PDF",
+    "SQL reporting tool (SSRS)",
+    "Historian Reporting",
+    "ERP",
+    "MES",
+    "Other",
+  ),
+  columns: 2
+)
 
 Attach examples of existing reports whenever possible.
 
