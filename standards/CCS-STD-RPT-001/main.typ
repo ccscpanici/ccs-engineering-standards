@@ -1,7 +1,7 @@
 #import "../../framework/theme.typ": *
 #import "metadata.typ": document
 
-#show: ccs-standard
+#show: body => ccs-standard(document, body)
 
 #cover(document)
 

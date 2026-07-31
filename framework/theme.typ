@@ -1,5 +1,5 @@
 #import "styles/colors.typ": *
-#import "styles/page.typ"
+#import "styles/page.typ": *
 #import "styles/typography.typ"
 
 #import "components/tables.typ": *
@@ -9,7 +9,7 @@
 #import "layouts/cover.typ": *
 #import "layouts/document-info.typ": *
 
-#let ccs-standard(body) = {
+#let ccs-standard(document, body) = {
   show heading.where(level: 1): it => {
     set text(
       size: 22pt,
@@ -37,5 +37,5 @@
     it
   }
 
-  body
+  apply-page-style(document, body)
 }
