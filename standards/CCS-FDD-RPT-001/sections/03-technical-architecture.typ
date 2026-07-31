@@ -1,3 +1,4 @@
+#import "../../../framework/framework.typ": reporting-system
 #let techical-architecture() = [
 
   = Technical Architecture
@@ -11,6 +12,8 @@
   Each layer communicates only with adjacent layers, minimizing coupling and
   allowing individual components to be modified without affecting the entire
   system.
+
+  #reporting-system()
 
   == Architecture Layers
 
