@@ -1,6 +1,15 @@
-#import "../framework/colors.typ": *
-#import "../framework/page.typ"
-#import "../framework/typography.typ"
+#import "../framework/theme.typ": *
+
+#let metadata = (
+  title: "Reporting Requirements Workbook",
+  document: "CCS-STD-RPT-001",
+  customer: "Nasonville Dairy",
+  project: "CIP / HTST / Silo Reporting",
+  facility: "Nasonville, WI",
+  author: "Chris Panici",
+  revision: "1.0",
+  date: "July 31, 2026",
+)
 
 #align(center)[
   #v(0.25in)
@@ -22,22 +31,16 @@
   #v(0.4in)
 
   #text(
-    size: 28pt,
-    weight: 600,
-    fill: ccs-dark,
-  )[REPORTING REQUIREMENTS]
-
-  #text(
-    size: 28pt,
-    weight: "bold",
-    fill: ccs-dark,
-  )[WORKBOOK]
+      size: 28pt,
+      weight: "bold",
+      fill: ccs-dark,
+    )[#upper(metadata.title)]
 
   #v(0.22in)
 
   #text(
     size: 13pt,
-    weight: "semibold",
+    weight: 600,
     fill: ccs-orange,
   )[Industrial Automation]
 
@@ -74,22 +77,22 @@
     ],
 
     [#strong[Customer]],
-    [Nasonville Dairy],
+    [#metadata.customer],
 
     [#strong[Project]],
-    [CIP / HTST / Silo Reporting],
+    [#metadata.project],
 
     [#strong[Facility]],
-    [Nasonville, WI],
+    [#metadata.facility],
 
     [#strong[Prepared By]],
-    [C. Panici],
+    [#metadata.author],
 
     [#strong[Date]],
-    [July 31, 2026],
+    [#metadata.date],
 
     [#strong[Revision]],
-    [1.0],
+    [#metadata.revision],
   )
 ]
 
@@ -116,6 +119,6 @@
       size: 9pt,
       weight: "bold",
       fill: ccs-dark,
-    )[CCS-STD-RPT-001]
+    )[#metadata.document]
   ],
 )
