@@ -1,0 +1,12 @@
+framework/layouts/title-page.typ
+framework/layouts/appendix.typ
+framework/components/signature.typ
+framework/components/notes.typ
+framework/components/figures.typ
+framework/styles/spacing.typ
+framework/document-types/procedure.typ
+framework/document-types/standard.typ
+examples/checklists.typ
+examples/callouts.typ
+examples/forms.typ
+examples/tables.typ

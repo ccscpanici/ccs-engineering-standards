@@ -1,0 +1,5 @@
+#let note-icon = "📝"
+#let warning-icon = "⚠"
+#let tip-icon = "💡"
+#let info-icon = "ℹ"
+#let check-icon = "✓"

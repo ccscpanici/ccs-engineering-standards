@@ -1,15 +1,33 @@
-# CCS Engineering Standards
+# CCS Engineering Publishing Framework
 
-This repository contains the Complete Control Solutions engineering
-standards library.
+The CCS Engineering Publishing Framework is a reusable Typst framework for
+creating professional engineering standards, specifications, worksheets,
+acceptance tests, and customer documentation.
 
-The project uses Typst to generate professionally formatted
-engineering standards, customer workbooks, and technical documentation.
+## Features
 
-## Standards
+- Metadata-driven documents
+- Automatic cover pages
+- Document information pages
+- Automatic table of contents
+- Automatic page numbering
+- Running headers and footers
+- CCS worksheet tables
+- Engineering callouts
+- Reusable forms
+- Checklists
+- Revision history
+- Signature blocks
 
-- CCS-STD-RPT-001 — Reporting Requirements Workbook
+## Included Standards
 
-## Status
+- CCS-STD-RPT-001 – Reporting Requirements Workbook
 
-Framework: In Development
+## Roadmap
+
+- Functional Design Specification
+- Software Design Specification
+- Factory Acceptance Test
+- Site Acceptance Test
+- PLC Programming Standard
+- HMI Design Standard

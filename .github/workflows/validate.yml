@@ -1,0 +1,31 @@
+name: Validate Typst Framework
+
+on:
+  push:
+    branches:
+      - main
+      - "feature/**"
+      - "bugfix/**"
+      - "refactor/**"
+      - "docs/**"
+
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Install Typst
+        uses: typst-community/setup-typst@v4
+
+      - name: Make scripts executable
+        run: |
+          chmod +x build.sh
+          chmod +x scripts/*.sh
+
+      - name: Validate framework
+        run: ./scripts/check.sh
