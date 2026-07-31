@@ -1,118 +1,122 @@
-= Technical Architecture
+#let techical-architecture() = [
 
-== Overview
+  = Technical Architecture
 
-The reporting system is implemented using a layered architecture to separate
-control, data acquisition, storage, reporting, and quality assurance
-responsibilities.
+  == Overview
 
-Each layer communicates only with adjacent layers, minimizing coupling and
-allowing individual components to be modified without affecting the entire
-system.
+  The reporting system is implemented using a layered architecture to separate
+  control, data acquisition, storage, reporting, and quality assurance
+  responsibilities.
 
-== Architecture Layers
+  Each layer communicates only with adjacent layers, minimizing coupling and
+  allowing individual components to be modified without affecting the entire
+  system.
 
-The reporting solution consists of the following layers:
+  == Architecture Layers
 
-1. PLC Control System
-2. Ignition Gateway
-3. Microsoft SQL Server
-4. Reporting Services
-5. Client Applications
+  The reporting solution consists of the following layers:
 
-== PLC Layer
+  1. PLC Control System
+  2. Ignition Gateway
+  3. Microsoft SQL Server
+  4. Reporting Services
+  5. Client Applications
 
-Responsibilities:
+  == PLC Layer
 
-- Detect report start and completion
-- Capture production values
-- Timestamp events
-- Buffer report records
-- Detect alarms
-- Provide data to Ignition
+  Responsibilities:
 
-The PLC remains the authoritative source for process values and event timing.
+  - Detect report start and completion
+  - Capture production values
+  - Timestamp events
+  - Buffer report records
+  - Detect alarms
+  - Provide data to Ignition
 
-== Ignition Layer
+  The PLC remains the authoritative source for process values and event timing.
 
-Responsibilities:
+  == Ignition Layer
 
-- Collect PLC records
-- Buffer transactions
-- Write SQL records
-- Execute report generation
-- Provide operator screens
-- Display reports
-- Manage report workflow
+  Responsibilities:
 
-Ignition acts as the middleware between the control system and the reporting
-database.
+  - Collect PLC records
+  - Buffer transactions
+  - Write SQL records
+  - Execute report generation
+  - Provide operator screens
+  - Display reports
+  - Manage report workflow
 
-== SQL Layer
+  Ignition acts as the middleware between the control system and the reporting
+  database.
 
-Responsibilities:
+  == SQL Layer
 
-- Permanent storage
-- Data relationships
-- Stored procedures
-- Report numbering
-- QA workflow
-- Historical retrieval
-- Backup and recovery
+  Responsibilities:
 
-SQL Server is the system of record for all completed reports.
+  - Permanent storage
+  - Data relationships
+  - Stored procedures
+  - Report numbering
+  - QA workflow
+  - Historical retrieval
+  - Backup and recovery
 
-== Reporting Layer
+  SQL Server is the system of record for all completed reports.
 
-Responsibilities:
+  == Reporting Layer
 
-- Report generation
-- PDF rendering
-- Printing
-- Report review
-- Report approval
-- Report archive
+  Responsibilities:
 
-== Client Layer
+  - Report generation
+  - PDF rendering
+  - Printing
+  - Report review
+  - Report approval
+  - Report archive
 
-Users access the reporting system through Ignition Perspective or Vision
-clients.
+  == Client Layer
 
-Different user roles may include:
+  Users access the reporting system through Ignition Perspective or Vision
+  clients.
 
-- Operators
-- Supervisors
-- QA
-- Maintenance
-- Engineering
-- Administrators
+  Different user roles may include:
 
-== System Boundaries
+  - Operators
+  - Supervisors
+  - QA
+  - Maintenance
+  - Engineering
+  - Administrators
 
-The reporting system interfaces with:
+  == System Boundaries
 
-- PLC Control System
-- Ignition Gateway
-- SQL Server
-- Active Directory (optional)
-- Network Time Server
-- Backup System
+  The reporting system interfaces with:
 
-The following systems are outside the project scope unless specifically
-identified elsewhere:
+  - PLC Control System
+  - Ignition Gateway
+  - SQL Server
+  - Active Directory (optional)
+  - Network Time Server
+  - Backup System
 
-- ERP
-- MES
-- Corporate historians
-- Business Intelligence systems
+  The following systems are outside the project scope unless specifically
+  identified elsewhere:
 
-== Design Philosophy
+  - ERP
+  - MES
+  - Corporate historians
+  - Business Intelligence systems
 
-The architecture has been designed with the following objectives:
+  == Design Philosophy
 
-- High reliability
-- Modular implementation
-- Simple troubleshooting
-- Expandability
-- Long-term maintainability
-- Clear ownership of responsibilities
+  The architecture has been designed with the following objectives:
+
+  - High reliability
+  - Modular implementation
+  - Simple troubleshooting
+  - Expandability
+  - Long-term maintainability
+  - Clear ownership of responsibilities
+
+]

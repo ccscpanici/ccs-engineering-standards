@@ -1,42 +1,45 @@
 #import "../../../framework/components/callouts.typ": note, warning, tip
 
-= Introduction
+#let indroduction() = [
+    
+  = Introduction
 
-== Purpose
+  == Purpose
 
-The purpose of this workbook...
+  The purpose of this workbook...
 
-== Scope
+  == Scope
 
-This document covers...
+  This document covers...
 
-== Intended Audience
+  == Intended Audience
 
-This workbook is intended for:
+  This workbook is intended for:
 
-- Project managers
-- Process engineers
-- Controls engineers
-- SCADA developers
-- Quality Assurance personnel
-- Plant operations
-- Customer stakeholders
+  - Project managers
+  - Process engineers
+  - Controls engineers
+  - SCADA developers
+  - Quality Assurance personnel
+  - Plant operations
+  - Customer stakeholders
 
-== How to Use This Workbook
+  == How to Use This Workbook
 
-Each report should...
+  Each report should...
 
-== Terminology
+  == Terminology
 
-- *Report* — A generated document or electronic record.
-- *Data Source* — The origin of the information used within a report.
-- *Approval Workflow* — The process used to review and approve report data.
-- *Revision* — A tracked modification to the report specification.
+  - *Report* — A generated document or electronic record.
+  - *Data Source* — The origin of the information used within a report.
+  - *Approval Workflow* — The process used to review and approve report data.
+  - *Revision* — A tracked modification to the report specification.
 
-#note[
-If a question does not apply to the project, leave it blank or mark it as not applicable.
-]
+  #note[
+  If a question does not apply to the project, leave it blank or mark it as not applicable.
+  ]
 
-#tip[
-Attach existing reports, screenshots, spreadsheets, and paper forms whenever possible.
+  #tip[
+  Attach existing reports, screenshots, spreadsheets, and paper forms whenever possible.
+  ]
 ]

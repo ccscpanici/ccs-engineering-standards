@@ -1,136 +1,140 @@
-= Report Design
+#let report-design() = [
+    
+  = Report Design
 
-== Overview
+  == Overview
 
-The reporting system shall generate standardized production reports using data
-stored within Microsoft SQL Server.
+  The reporting system shall generate standardized production reports using data
+  stored within Microsoft SQL Server.
 
-Reports shall present production information in a consistent, readable format
-that supports operational review, quality assurance, regulatory compliance, and
-historical analysis.
+  Reports shall present production information in a consistent, readable format
+  that supports operational review, quality assurance, regulatory compliance, and
+  historical analysis.
 
-All reports shall be generated from completed report records.
+  All reports shall be generated from completed report records.
 
-== Report Types
+  == Report Types
 
-The reporting solution supports the following report types:
+  The reporting solution supports the following report types:
 
-- Vessel Report
-- CIP Report
-- HTST Report
-- HTST CIP Report
+  - Vessel Report
+  - CIP Report
+  - HTST Report
+  - HTST CIP Report
 
-Future report types may be added without modifying the overall reporting
-architecture.
+  Future report types may be added without modifying the overall reporting
+  architecture.
 
-== Report Components
+  == Report Components
 
-Each report should include, where applicable:
+  Each report should include, where applicable:
 
-- Report Identifier
-- Equipment Identification
-- Product Information
-- Batch Information
-- Operator Information
-- Production Start Time
-- Production End Time
-- Process Values
-- Alarm Summary
-- Operator Events
-- QA Annotations
-- QA Approval Status
+  - Report Identifier
+  - Equipment Identification
+  - Product Information
+  - Batch Information
+  - Operator Information
+  - Production Start Time
+  - Production End Time
+  - Process Values
+  - Alarm Summary
+  - Operator Events
+  - QA Annotations
+  - QA Approval Status
 
-Report layouts shall remain consistent across all report types.
+  Report layouts shall remain consistent across all report types.
 
-== Report Generation
+  == Report Generation
 
-Reports shall be generated after:
+  Reports shall be generated after:
 
-- Report completion
-- Database validation
-- Assignment of Report ID
-- Association of supporting records
+  - Report completion
+  - Database validation
+  - Assignment of Report ID
+  - Association of supporting records
 
-Only validated reports shall be available for review.
+  Only validated reports shall be available for review.
 
-== Report Review
+  == Report Review
 
-Operators shall be able to:
+  Operators shall be able to:
 
-- Search reports
-- View reports
-- Print reports
-- Export reports as PDF
+  - Search reports
+  - View reports
+  - Print reports
+  - Export reports as PDF
 
-Reports shall remain read-only during review.
+  Reports shall remain read-only during review.
 
-== Report Approval
+  == Report Approval
 
-QA personnel shall be able to:
+  QA personnel shall be able to:
 
-- Review reports
-- Add annotations
-- Place reports on hold
-- Approve completed reports
+  - Review reports
+  - Add annotations
+  - Place reports on hold
+  - Approve completed reports
 
-The approval history shall become part of the permanent report record.
+  The approval history shall become part of the permanent report record.
 
-== Report Revision Policy
+  == Report Revision Policy
 
-Production data shall not be modified after report completion.
+  Production data shall not be modified after report completion.
 
-If corrections are required:
+  If corrections are required:
 
-- QA annotations shall document the reason.
-- Approval history shall remain intact.
-- Original production data shall remain historically traceable.
+  - QA annotations shall document the reason.
+  - Approval history shall remain intact.
+  - Original production data shall remain historically traceable.
 
-The reporting system shall preserve a complete audit trail.
+  The reporting system shall preserve a complete audit trail.
 
-== Report Numbering
+  == Report Numbering
 
-Each completed report shall receive a unique Report ID.
+  Each completed report shall receive a unique Report ID.
 
-Report identifiers shall remain immutable throughout the life of the report.
+  Report identifiers shall remain immutable throughout the life of the report.
 
-== PDF Generation
+  == PDF Generation
 
-Reports shall support PDF export.
+  Reports shall support PDF export.
 
-Generated PDFs should include:
+  Generated PDFs should include:
 
-- CCS report template
-- Customer branding (where required)
-- Report identifier
-- Revision information
-- Approval status
-- Generation timestamp
+  - CCS report template
+  - Customer branding (where required)
+  - Report identifier
+  - Revision information
+  - Approval status
+  - Generation timestamp
 
-PDF output shall remain consistent across all supported report types.
+  PDF output shall remain consistent across all supported report types.
 
-== Historical Retrieval
+  == Historical Retrieval
 
-Users shall be able to retrieve reports using filters including:
+  Users shall be able to retrieve reports using filters including:
 
-- Report ID
-- Date range
-- Equipment
-- Product
-- Batch
-- Operator
-- QA status
+  - Report ID
+  - Date range
+  - Equipment
+  - Product
+  - Batch
+  - Operator
+  - QA status
 
-Historical retrieval shall remain responsive as report volume increases.
+  Historical retrieval shall remain responsive as report volume increases.
 
-== Performance
+  == Performance
 
-Typical report generation should complete within a few seconds under normal
-system loading.
+  Typical report generation should complete within a few seconds under normal
+  system loading.
 
-Historical searches should return results within acceptable operator response
-times.
+  Historical searches should return results within acceptable operator response
+  times.
 
-== Future Expansion
+  == Future Expansion
 
-The reporting engine shall support additional report templates without requiring
-modifications to existing report generation workflows.
+  The reporting engine shall support additional report templates without requiring
+  modifications to existing report generation workflows.
+
+]

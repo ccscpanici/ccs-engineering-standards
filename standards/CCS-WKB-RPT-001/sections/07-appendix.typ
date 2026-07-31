@@ -1,112 +1,117 @@
 #import "../../../framework/components/forms.typ": write-space, field, signature-line
 #import "../../../framework/components/checklist.typ": checklist
-= Appendix
 
-== Acronyms
+#let appendix() = [
+    
+  = Appendix
 
-#table(
-  columns: (1.4in, 1fr),
-  inset: 7pt,
-  stroke: 0.5pt,
+  == Acronyms
 
-  table.header(
-    [*Acronym*],
-    [*Definition*],
-  ),
+  #table(
+    columns: (1.4in, 1fr),
+    inset: 7pt,
+    stroke: 0.5pt,
 
-  [PLC], [Programmable Logic Controller],
-  [HMI], [Human-Machine Interface],
-  [SCADA], [Supervisory Control and Data Acquisition],
-  [SQL], [Structured Query Language],
-  [MES], [Manufacturing Execution System],
-  [ERP], [Enterprise Resource Planning],
-  [LIMS], [Laboratory Information Management System],
-  [QA], [Quality Assurance],
-  [CIP], [Clean-In-Place],
-  [HTST], [High Temperature Short Time],
-)
+    table.header(
+      [*Acronym*],
+      [*Definition*],
+    ),
 
-== Reference Documents
+    [PLC], [Programmable Logic Controller],
+    [HMI], [Human-Machine Interface],
+    [SCADA], [Supervisory Control and Data Acquisition],
+    [SQL], [Structured Query Language],
+    [MES], [Manufacturing Execution System],
+    [ERP], [Enterprise Resource Planning],
+    [LIMS], [Laboratory Information Management System],
+    [QA], [Quality Assurance],
+    [CIP], [Clean-In-Place],
+    [HTST], [High Temperature Short Time],
+  )
 
-#table(
-  columns: (2.3in, 1.2in, 1fr),
-  inset: 7pt,
-  stroke: 0.5pt,
+  == Reference Documents
 
-  table.header(
-    [*Document*],
-    [*Revision*],
-    [*Notes*],
-  ),
+  #table(
+    columns: (2.3in, 1.2in, 1fr),
+    inset: 7pt,
+    stroke: 0.5pt,
 
-  [], [], [],
-  [], [], [],
-  [], [], [],
-  [], [], [],
-)
+    table.header(
+      [*Document*],
+      [*Revision*],
+      [*Notes*],
+    ),
 
-== Existing Reports Provided by Customer
+    [], [], [],
+    [], [], [],
+    [], [], [],
+    [], [], [],
+  )
 
-Have sample reports been provided?
+  == Existing Reports Provided by Customer
 
-#checklist(
-  (
-    "Yes",
-    "No"
-  ),
-  columns: 2
-)
+  Have sample reports been provided?
 
-If yes, list the attached reports.
+  #checklist(
+    (
+      "Yes",
+      "No"
+    ),
+    columns: 2
+  )
 
-#write-space(height: 1.2in)
+  If yes, list the attached reports.
 
-== Open Questions
+  #write-space(height: 1.2in)
 
-List any questions that remain unresolved before implementation begins.
+  == Open Questions
 
-#write-space(height: 2in)
+  List any questions that remain unresolved before implementation begins.
 
-== Action Items
+  #write-space(height: 2in)
 
-#table(
-  columns: (0.6in, 3.6in, 1.5in, 1in),
-  inset: 7pt,
-  stroke: 0.5pt,
+  == Action Items
 
-  table.header(
-    [*ID*],
-    [*Action Item*],
-    [*Owner*],
-    [*Status*],
-  ),
+  #table(
+    columns: (0.6in, 3.6in, 1.5in, 1in),
+    inset: 7pt,
+    stroke: 0.5pt,
 
-  [AI-001], [], [], [],
-  [AI-002], [], [], [],
-  [AI-003], [], [], [],
-  [AI-004], [], [], [],
-  [AI-005], [], [], [],
-)
+    table.header(
+      [*ID*],
+      [*Action Item*],
+      [*Owner*],
+      [*Status*],
+    ),
 
-== Customer Approval
+    [AI-001], [], [], [],
+    [AI-002], [], [], [],
+    [AI-003], [], [], [],
+    [AI-004], [], [], [],
+    [AI-005], [], [], [],
+  )
 
-This workbook represents the agreed reporting requirements for the project.
+  == Customer Approval
 
-Changes requested after approval may require additional engineering effort and may affect project schedule and cost.
+  This workbook represents the agreed reporting requirements for the project.
 
-#v(0.25in)
+  Changes requested after approval may require additional engineering effort and may affect project schedule and cost.
 
-#grid(
-  columns: (1fr, 1fr),
-  gutter: 0.35in,
+  #v(0.25in)
 
-  [
-    #signature-line("Customer Representative")
-    #field("Date", height: 0.35in)
-  ],
+  #grid(
+    columns: (1fr, 1fr),
+    gutter: 0.35in,
 
-  [
-    #signature-line("Complete Control Solutions")
-    #field("Date", height: 0.35in)
-  ],
-)
+    [
+      #signature-line("Customer Representative")
+      #field("Date", height: 0.35in)
+    ],
+
+    [
+      #signature-line("Complete Control Solutions")
+      #field("Date", height: 0.35in)
+    ],
+  )
+
+]

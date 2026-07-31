@@ -1,224 +1,229 @@
 #import "../../../framework/components/forms.typ": write-space
 #import "../../../framework/components/checklist.typ": checklist
-= Data Sources
 
-This section identifies the systems, equipment, databases, and manual processes that provide information to the reporting solution.
+#let data-sources() = [
+    
+  = Data Sources
 
-== Data Source Inventory
+  This section identifies the systems, equipment, databases, and manual processes that provide information to the reporting solution.
 
-#table(
-  columns: (1.5in, 1.2in, 2.2in, 1fr),
-  inset: 7pt,
-  stroke: 0.5pt,
+  == Data Source Inventory
 
-  table.header(
-    [*Data Source*],
-    [*Type*],
-    [*Description*],
-    [*Reports Used By*],
-  ),
+  #table(
+    columns: (1.5in, 1.2in, 2.2in, 1fr),
+    inset: 7pt,
+    stroke: 0.5pt,
 
-  [], [PLC], [], [],
-  [], [SCADA], [], [],
-  [], [Historian], [], [],
-  [], [SQL Database], [], [],
-  [], [ERP], [], [],
-  [], [MES], [], [],
-  [], [LIMS], [], [],
-  [], [Manual Entry], [], [],
-  [], [External System], [], [],
-)
+    table.header(
+      [*Data Source*],
+      [*Type*],
+      [*Description*],
+      [*Reports Used By*],
+    ),
 
-== PLC Systems
+    [], [PLC], [], [],
+    [], [SCADA], [], [],
+    [], [Historian], [], [],
+    [], [SQL Database], [], [],
+    [], [ERP], [], [],
+    [], [MES], [], [],
+    [], [LIMS], [], [],
+    [], [Manual Entry], [], [],
+    [], [External System], [], [],
+  )
 
-List all PLCs that will provide data for reporting.
+  == PLC Systems
 
-#table(
-  columns: (1.4in, 1.3in, 1.2in, 1.5in, 1fr),
-  inset: 7pt,
-  stroke: 0.5pt,
+  List all PLCs that will provide data for reporting.
 
-  table.header(
-    [*PLC Name*],
-    [*Manufacturer*],
-    [*Model*],
-    [*Network*],
-    [*Notes*],
-  ),
+  #table(
+    columns: (1.4in, 1.3in, 1.2in, 1.5in, 1fr),
+    inset: 7pt,
+    stroke: 0.5pt,
 
-  [], [], [], [], [],
-  [], [], [], [], [],
-  [], [], [], [], [],
-  [], [], [], [], [],
-)
+    table.header(
+      [*PLC Name*],
+      [*Manufacturer*],
+      [*Model*],
+      [*Network*],
+      [*Notes*],
+    ),
 
-== SCADA and HMI Systems
+    [], [], [], [], [],
+    [], [], [], [], [],
+    [], [], [], [], [],
+    [], [], [], [], [],
+  )
 
-#table(
-  columns: (1.5in, 1.2in, 1.4in, 1fr),
-  inset: 7pt,
-  stroke: 0.5pt,
+  == SCADA and HMI Systems
 
-  table.header(
-    [*System*],
-    [*Version*],
-    [*Vendor*],
-    [*Purpose*],
-  ),
+  #table(
+    columns: (1.5in, 1.2in, 1.4in, 1fr),
+    inset: 7pt,
+    stroke: 0.5pt,
 
-  [], [], [], [],
-  [], [], [], [],
-  [], [], [], [],
-)
+    table.header(
+      [*System*],
+      [*Version*],
+      [*Vendor*],
+      [*Purpose*],
+    ),
 
-== Database Systems
+    [], [], [], [],
+    [], [], [], [],
+    [], [], [], [],
+  )
 
-#table(
-  columns: (1.6in, 1.3in, 2in, 1fr),
-  inset: 7pt,
-  stroke: 0.5pt,
+  == Database Systems
 
-  table.header(
-    [*Database*],
-    [*Type*],
-    [*Purpose*],
-    [*Existing / New*],
-  ),
+  #table(
+    columns: (1.6in, 1.3in, 2in, 1fr),
+    inset: 7pt,
+    stroke: 0.5pt,
 
-  [], [Microsoft SQL Server], [], [],
-  [], [], [], [],
-  [], [], [], [],
-)
+    table.header(
+      [*Database*],
+      [*Type*],
+      [*Purpose*],
+      [*Existing / New*],
+    ),
 
-== External Systems
+    [], [Microsoft SQL Server], [], [],
+    [], [], [], [],
+    [], [], [], [],
+  )
 
-Will the reporting system exchange information with other systems?
+  == External Systems
 
-#checklist(
-  (
-    "ERP",
-    "MES",
-    "LIMS",
-    "CMMS",
-    "Accounting system",
-    "Sharepoint",
-    "Cloud service",
-    "REST API",
-    "OPC UA",
-    "MQTT",
-    "CSV import or export",
-    "Microsoft Excel",
-    "Other"
-  ),
-  columns: 2
-)
+  Will the reporting system exchange information with other systems?
 
-== Manual Data Collection
+  #checklist(
+    (
+      "ERP",
+      "MES",
+      "LIMS",
+      "CMMS",
+      "Accounting system",
+      "Sharepoint",
+      "Cloud service",
+      "REST API",
+      "OPC UA",
+      "MQTT",
+      "CSV import or export",
+      "Microsoft Excel",
+      "Other"
+    ),
+    columns: 2
+  )
 
-Will operators or other personnel manually enter information?
+  == Manual Data Collection
 
-#checklist(
-  (
-    "Yes",
-    "No"
-  ),
-  columns:2
-)
+  Will operators or other personnel manually enter information?
 
-Examples may include:
+  #checklist(
+    (
+      "Yes",
+      "No"
+    ),
+    columns:2
+  )
 
-- Product codes
-- Lot numbers
-- Batch numbers
-- QA measurements
-- Laboratory results
-- Operator comments
-- Downtime reasons
-- Inspection results
+  Examples may include:
 
-Describe the required manual data entry.
+  - Product codes
+  - Lot numbers
+  - Batch numbers
+  - QA measurements
+  - Laboratory results
+  - Operator comments
+  - Downtime reasons
+  - Inspection results
 
-#write-space()
+  Describe the required manual data entry.
 
-== Data Quality
+  #write-space()
 
-Identify any known issues with existing data.
+  == Data Quality
 
-#checklist(
-  (
-    "Missing values",
-    "Duplicate records",
-    "Inconsistent naming",
-    "Manual calculations",
-    "Paper records",
-    "Time synchronization issues",
-    "Data-entry errors",
-    "Unknown"
-  ),
-  columns: 2
-)
+  Identify any known issues with existing data.
 
-Describe any known concerns.
+  #checklist(
+    (
+      "Missing values",
+      "Duplicate records",
+      "Inconsistent naming",
+      "Manual calculations",
+      "Paper records",
+      "Time synchronization issues",
+      "Data-entry errors",
+      "Unknown"
+    ),
+    columns: 2
+  )
 
-#write-space()
+  Describe any known concerns.
 
-== Time Synchronization
+  #write-space()
 
-Is a network time protocol server available?
+  == Time Synchronization
 
-#checklist(
-  (
-    "Yes",
-    "No",
-    "I don't know"
-  ),
-  columns: 2
-)
+  Is a network time protocol server available?
 
-NTP server name or IP address:
+  #checklist(
+    (
+      "Yes",
+      "No",
+      "I don't know"
+    ),
+    columns: 2
+  )
 
-#write-space(height: 0.45in)
+  NTP server name or IP address:
 
-Should the PLC controllers, Ignition servers, database servers, and operator workstations synchronize to the same time source?
+  #write-space(height: 0.45in)
 
-#checklist(
-  (
-    "Yes",
-    "No"
-  ),
-  columns: 2
-)
+  Should the PLC controllers, Ignition servers, database servers, and operator workstations synchronize to the same time source?
 
-Should time synchronization failures generate an alarm or notification?
+  #checklist(
+    (
+      "Yes",
+      "No"
+    ),
+    columns: 2
+  )
 
-#checklist(
-  (
-    "Yes",
-    "No"
-  ),
-  columns: 2
-)
+  Should time synchronization failures generate an alarm or notification?
 
-== Historical Data
+  #checklist(
+    (
+      "Yes",
+      "No"
+    ),
+    columns: 2
+  )
 
-Should historical information be imported into the new reporting system?
+  == Historical Data
 
-#checklist(
-  (
-    "Existing SQL database",
-    "Historian",
-    "Archived reports",
-    "Microsoft Excel files",
-    "Paper records",
-    "No historical data required"
-  ),
-  columns: 2
-)
+  Should historical information be imported into the new reporting system?
 
-Describe the scope of any historical-data migration.
+  #checklist(
+    (
+      "Existing SQL database",
+      "Historian",
+      "Archived reports",
+      "Microsoft Excel files",
+      "Paper records",
+      "No historical data required"
+    ),
+    columns: 2
+  )
 
-#write-space()
+  Describe the scope of any historical-data migration.
 
-== Engineering Notes
+  #write-space()
 
-#write-space(height: 1.5in)
+  == Engineering Notes
+
+  #write-space(height: 1.5in)
+
+]

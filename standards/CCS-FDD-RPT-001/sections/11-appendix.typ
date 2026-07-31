@@ -1,82 +1,87 @@
 
 #import "../../../framework/components/forms.typ": write-space
 #import "../../../framework/components/checklist.typ": checklist
-= Appendix
 
-== Acronyms
+#let appendix() = [
+    
+  = Appendix
 
-#table(
-  columns: (1.4in, 1fr),
-  inset: 7pt,
-  stroke: 0.5pt,
+  == Acronyms
 
-  table.header(
-    [*Acronym*],
-    [*Definition*],
-  ),
+  #table(
+    columns: (1.4in, 1fr),
+    inset: 7pt,
+    stroke: 0.5pt,
 
-  [PLC], [Programmable Logic Controller],
-  [HMI], [Human Machine Interface],
-  [SCADA], [Supervisory Control and Data Acquisition],
-  [SQL], [Structured Query Language],
-  [MES], [Manufacturing Execution System],
-  [ERP], [Enterprise Resource Planning],
-  [LIMS], [Laboratory Information Management System],
-  [QA], [Quality Assurance],
-  [CIP], [Clean-In-Place],
-  [HTST], [High Temperature Short Time],
-  [FDD], [Functional Design Document],
-)
+    table.header(
+      [*Acronym*],
+      [*Definition*],
+    ),
 
-== Referenced Documents
+    [PLC], [Programmable Logic Controller],
+    [HMI], [Human Machine Interface],
+    [SCADA], [Supervisory Control and Data Acquisition],
+    [SQL], [Structured Query Language],
+    [MES], [Manufacturing Execution System],
+    [ERP], [Enterprise Resource Planning],
+    [LIMS], [Laboratory Information Management System],
+    [QA], [Quality Assurance],
+    [CIP], [Clean-In-Place],
+    [HTST], [High Temperature Short Time],
+    [FDD], [Functional Design Document],
+  )
 
-#table(
-  columns: (2.8in, 1.3in, 1fr),
-  inset: 7pt,
-  stroke: 0.5pt,
+  == Referenced Documents
 
-  table.header(
-    [*Document*],
-    [*Revision*],
-    [*Purpose*],
-  ),
+  #table(
+    columns: (2.8in, 1.3in, 1fr),
+    inset: 7pt,
+    stroke: 0.5pt,
 
-  [CCS-WKB-RPT-001], [Current], [Reporting Requirements Workbook],
-  [CCS-FDD-RPT-001], [Current], [Reporting Functional Design Document],
-  [Factory Acceptance Test], [TBD], [Factory verification],
-  [Site Acceptance Test], [TBD], [Site verification],
-)
+    table.header(
+      [*Document*],
+      [*Revision*],
+      [*Purpose*],
+    ),
 
-== Design Assumptions
+    [CCS-WKB-RPT-001], [Current], [Reporting Requirements Workbook],
+    [CCS-FDD-RPT-001], [Current], [Reporting Functional Design Document],
+    [Factory Acceptance Test], [TBD], [Factory verification],
+    [Site Acceptance Test], [TBD], [Site verification],
+  )
 
-The following assumptions were made during preparation of this document.
+  == Design Assumptions
 
-#write-space(height: 1.5in)
+  The following assumptions were made during preparation of this document.
 
-== Future Enhancements
+  #write-space(height: 1.5in)
 
-Potential future improvements include:
+  == Future Enhancements
 
-#checklist(
-  (
-    "Electronic Signatures",
-    "Automated Report Distribution",
-    "Cloud Report Archive",
-    "Power BI Integration",
-    "MES Integration",
-    "ERP Integration",
-    "Mobile Report Review",
-    "Advanced Analytics",
-  ),
-  columns: 2,
-)
+  Potential future improvements include:
 
-== Open Design Decisions
+  #checklist(
+    (
+      "Electronic Signatures",
+      "Automated Report Distribution",
+      "Cloud Report Archive",
+      "Power BI Integration",
+      "MES Integration",
+      "ERP Integration",
+      "Mobile Report Review",
+      "Advanced Analytics",
+    ),
+    columns: 2,
+  )
 
-The following items remain subject to customer review and approval.
+  == Open Design Decisions
 
-#write-space(height: 2in)
+  The following items remain subject to customer review and approval.
 
-== Notes
+  #write-space(height: 2in)
 
-#write-space(height: 2in)
+  == Notes
+
+  #write-space(height: 2in)
+
+]

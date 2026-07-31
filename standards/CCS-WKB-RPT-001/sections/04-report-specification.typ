@@ -1,176 +1,181 @@
 #import "../../../framework/components/forms.typ": write-space
 #import "../../../framework/components/checklist.typ": checklist
-= Report Specification Worksheet
 
-Complete one copy of this worksheet for each report identified in Section 3.
+#let report-specifications() = [
+    
+  = Report Specification Worksheet
 
-== Report Information
+  Complete one copy of this worksheet for each report identified in Section 3.
 
-#table(
-  columns: (2in, 1fr),
-  inset: 8pt,
-  stroke: 0.5pt,
+  == Report Information
 
-  [*Report ID*], [],
-  [*Report Name*], [],
-  [*Process Area*], [],
-  [*Report Owner*], [],
-  [*Priority*], [High / Medium / Low],
-  [*New or Existing*], [New / Existing / Replacement],
-  [*Regulatory Report*], [Yes / No],
-)
+  #table(
+    columns: (2in, 1fr),
+    inset: 8pt,
+    stroke: 0.5pt,
 
-== Purpose
+    [*Report ID*], [],
+    [*Report Name*], [],
+    [*Process Area*], [],
+    [*Report Owner*], [],
+    [*Priority*], [High / Medium / Low],
+    [*New or Existing*], [New / Existing / Replacement],
+    [*Regulatory Report*], [Yes / No],
+  )
 
-Describe why this report is required and what business or operational decision it supports.
+  == Purpose
 
-#write-space()
+  Describe why this report is required and what business or operational decision it supports.
 
-== Users
+  #write-space()
 
-Select all users who will access or rely on this report.
+  == Users
 
-#checklist(
-  (
-    "Operator",
-    "Supervisor",
-    "Quality Assurance",
-    "Maintenance",
-    "Engineering",
-    "Corporate",
-    "Customer",
-    "Regulatory agency",
-    "Other"
-  ),
-  columns: 2
-)
+  Select all users who will access or rely on this report.
 
-== Report Trigger
+  #checklist(
+    (
+      "Operator",
+      "Supervisor",
+      "Quality Assurance",
+      "Maintenance",
+      "Engineering",
+      "Corporate",
+      "Customer",
+      "Regulatory agency",
+      "Other"
+    ),
+    columns: 2
+  )
 
-How is the report created?
+  == Report Trigger
 
-#checklist(
-  (
-    "Automatic",
-    "Manual",
-    "Scheduled",
-    "Batch Complete",
-    "CIP Complete",
-    "Production run complete",
-    "Shift end",
-    "Daily",
-    "Weekly",
-    "Monthly",
-    "Alarm or event",
-    "Other"
-  ),
-  columns: 2
-)
+  How is the report created?
 
-== Report Contents
+  #checklist(
+    (
+      "Automatic",
+      "Manual",
+      "Scheduled",
+      "Batch Complete",
+      "CIP Complete",
+      "Production run complete",
+      "Shift end",
+      "Daily",
+      "Weekly",
+      "Monthly",
+      "Alarm or event",
+      "Other"
+    ),
+    columns: 2
+  )
 
-List all information that must appear on the report.
+  == Report Contents
 
-#write-space(height: 1.5in)
+  List all information that must appear on the report.
 
-== Calculations
+  #write-space(height: 1.5in)
 
-Does the report require calculated values?
+  == Calculations
 
-- [ ] No
-- [ ] Yes
+  Does the report require calculated values?
 
-If yes, describe the required calculations.
+  - [ ] No
+  - [ ] Yes
 
-#write-space(height: 1in)
+  If yes, describe the required calculations.
 
-== Operator Input
+  #write-space(height: 1in)
 
-Does the report require operator-entered information?
+  == Operator Input
 
-#checklist(
-  (
-    "No",
-    "Yes"
-  ),
-  columns: 2
-)
+  Does the report require operator-entered information?
 
-Examples may include comments, product codes, lot numbers, QA notes, downtime reasons, or shift notes.
+  #checklist(
+    (
+      "No",
+      "Yes"
+    ),
+    columns: 2
+  )
 
-#write-space(height: 1in)
+  Examples may include comments, product codes, lot numbers, QA notes, downtime reasons, or shift notes.
 
-== Approval Workflow
+  #write-space(height: 1in)
 
-Is approval required?
+  == Approval Workflow
 
-#checklist(
-  (
-    "No",
-    "Yes"
-  ), 
-  columns: 2
-)
+  Is approval required?
 
-If yes, select the required approval steps.
+  #checklist(
+    (
+      "No",
+      "Yes"
+    ), 
+    columns: 2
+  )
 
-#checklist(
-  (
-    "Operator review",
-    "Supervisor approval",
-    "QA approval",
-    "Electronic signature",
-    "Second approval",
-    "Customer approval"
-  ),
-  columns: 2
-)
+  If yes, select the required approval steps.
 
-== Report Distribution
+  #checklist(
+    (
+      "Operator review",
+      "Supervisor approval",
+      "QA approval",
+      "Electronic signature",
+      "Second approval",
+      "Customer approval"
+    ),
+    columns: 2
+  )
 
-Select all required output or distribution methods.
+  == Report Distribution
 
-#checklist(
-  (
-    "Printed Copy",
-    "PDF",
-    "Email",
-    "SQL Archive",
-    "Sharepoint",
-    "ERP",
-    "Customer portal",
-    "File server",
-    "Other"
-  ),
-  columns: 2
-)
+  Select all required output or distribution methods.
 
-== Retention Requirements
+  #checklist(
+    (
+      "Printed Copy",
+      "PDF",
+      "Email",
+      "SQL Archive",
+      "Sharepoint",
+      "ERP",
+      "Customer portal",
+      "File server",
+      "Other"
+    ),
+    columns: 2
+  )
 
-How long must the report be retained?
+  == Retention Requirements
 
-#checklist(
-  (
-    "Less than 30 days",
-    "30 days",
-    "90 days",
-    "1 year",
-    "3 years",
-    "5 years",
-    "7 years",
-    "10 years",
-    "Permanently",
-    "Other"
-  ),
-  columns: 2
-)
+  How long must the report be retained?
 
-== Acceptance Criteria
+  #checklist(
+    (
+      "Less than 30 days",
+      "30 days",
+      "90 days",
+      "1 year",
+      "3 years",
+      "5 years",
+      "7 years",
+      "10 years",
+      "Permanently",
+      "Other"
+    ),
+    columns: 2
+  )
 
-Describe what conditions must be satisfied before the report is considered complete.
+  == Acceptance Criteria
 
-#write-space(height: 1.25in)
+  Describe what conditions must be satisfied before the report is considered complete.
 
-== Engineering Notes
+  #write-space(height: 1.25in)
 
-#write-space(height: 1.25in)
+  == Engineering Notes
+
+  #write-space(height: 1.25in)
+
+]

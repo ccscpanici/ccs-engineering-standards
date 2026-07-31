@@ -1,121 +1,125 @@
-= Security
+#let security() = [
+    
+  = Security
 
-== Overview
+  == Overview
 
-The reporting system shall protect production data, report records, QA
-information, and system configuration through role-based security,
-authentication, authorization, and auditing.
+  The reporting system shall protect production data, report records, QA
+  information, and system configuration through role-based security,
+  authentication, authorization, and auditing.
 
-Security shall be applied consistently across the PLC, Ignition Gateway,
-Microsoft SQL Server, and supporting infrastructure.
+  Security shall be applied consistently across the PLC, Ignition Gateway,
+  Microsoft SQL Server, and supporting infrastructure.
 
-== Security Objectives
+  == Security Objectives
 
-The reporting system shall:
+  The reporting system shall:
 
-- Protect report integrity.
-- Prevent unauthorized access.
-- Preserve audit history.
-- Support user accountability.
-- Protect confidential production information.
-- Maintain system availability.
+  - Protect report integrity.
+  - Prevent unauthorized access.
+  - Preserve audit history.
+  - Support user accountability.
+  - Protect confidential production information.
+  - Maintain system availability.
 
-== Authentication
+  == Authentication
 
-User authentication should be provided through the customer's centralized
-identity management system whenever practical.
+  User authentication should be provided through the customer's centralized
+  identity management system whenever practical.
 
-Supported authentication methods may include:
+  Supported authentication methods may include:
 
-- Microsoft Active Directory
-- Ignition Identity Providers
-- Local Ignition Users
-- SQL Authentication (administrative use only)
+  - Microsoft Active Directory
+  - Ignition Identity Providers
+  - Local Ignition Users
+  - SQL Authentication (administrative use only)
 
-Authentication methods shall be selected according to customer standards.
+  Authentication methods shall be selected according to customer standards.
 
-== Authorization
+  == Authorization
 
-User permissions shall be assigned using role-based access control.
+  User permissions shall be assigned using role-based access control.
 
-Typical roles include:
+  Typical roles include:
 
-- Operator
-- Supervisor
-- Quality Assurance
-- Maintenance
-- Engineering
-- Administrator
+  - Operator
+  - Supervisor
+  - Quality Assurance
+  - Maintenance
+  - Engineering
+  - Administrator
 
-Users shall receive only the permissions necessary to perform their assigned
-responsibilities.
+  Users shall receive only the permissions necessary to perform their assigned
+  responsibilities.
 
-== Application Security
+  == Application Security
 
-The reporting application shall control access to:
+  The reporting application shall control access to:
 
-- Report viewing
-- Report generation
-- Report approval
-- QA annotation
-- Administrative configuration
-- Historical reports
+  - Report viewing
+  - Report generation
+  - Report approval
+  - QA annotation
+  - Administrative configuration
+  - Historical reports
 
-Unauthorized operations shall be denied and logged.
+  Unauthorized operations shall be denied and logged.
 
-== Database Security
+  == Database Security
 
-Microsoft SQL Server shall protect:
+  Microsoft SQL Server shall protect:
 
-- Report tables
-- QA records
-- Configuration tables
-- Stored procedures
+  - Report tables
+  - QA records
+  - Configuration tables
+  - Stored procedures
 
-Direct database modification shall be limited to authorized administrative
-accounts.
+  Direct database modification shall be limited to authorized administrative
+  accounts.
 
-Application users should access the database only through approved application
-interfaces.
+  Application users should access the database only through approved application
+  interfaces.
 
-== Audit Logging
+  == Audit Logging
 
-The reporting solution shall log security-related events including:
+  The reporting solution shall log security-related events including:
 
-- User logins
-- Failed login attempts
-- Report approvals
-- QA holds
-- Administrative changes
-- Security configuration changes
+  - User logins
+  - Failed login attempts
+  - Report approvals
+  - QA holds
+  - Administrative changes
+  - Security configuration changes
 
-Audit records shall remain historically available.
+  Audit records shall remain historically available.
 
-== Network Security
+  == Network Security
 
-Communications between system components should occur over secured plant
-networks.
+  Communications between system components should occur over secured plant
+  networks.
 
-Where supported, encrypted communication shall be used between:
+  Where supported, encrypted communication shall be used between:
 
-- PLC and Ignition
-- Ignition and SQL Server
-- Clients and Ignition Gateway
+  - PLC and Ignition
+  - Ignition and SQL Server
+  - Clients and Ignition Gateway
 
-Firewall rules should limit communication to required services only.
+  Firewall rules should limit communication to required services only.
 
-== Backup Security
+  == Backup Security
 
-Backup files shall be protected using customer-approved security procedures.
+  Backup files shall be protected using customer-approved security procedures.
 
-Backup media should be accessible only to authorized personnel.
+  Backup media should be accessible only to authorized personnel.
 
-Backup retention policies shall comply with customer requirements.
+  Backup retention policies shall comply with customer requirements.
 
-== Design Philosophy
+  == Design Philosophy
 
-Security shall support reliable plant operation without unnecessarily
-complicating normal operator activities.
+  Security shall support reliable plant operation without unnecessarily
+  complicating normal operator activities.
 
-The reporting system shall follow the principle of least privilege while
-maintaining complete traceability of user actions.
+  The reporting system shall follow the principle of least privilege while
+  maintaining complete traceability of user actions.
+
+]

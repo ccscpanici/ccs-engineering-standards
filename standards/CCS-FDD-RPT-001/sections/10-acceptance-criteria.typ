@@ -1,114 +1,117 @@
-#import "../../../framework/components/forms.typ": write-space
-= Acceptance Criteria
+#let acceptance-criteria() = [
+    
+  = Acceptance Criteria
 
-== Overview
+  == Overview
 
-The Reporting System shall be considered complete when all functional,
-performance, reliability, and documentation requirements defined within this
-Functional Design Document have been successfully demonstrated and accepted by
-the customer.
+  The Reporting System shall be considered complete when all functional,
+  performance, reliability, and documentation requirements defined within this
+  Functional Design Document have been successfully demonstrated and accepted by
+  the customer.
 
-Acceptance testing shall verify both normal operation and abnormal operating
-conditions.
+  Acceptance testing shall verify both normal operation and abnormal operating
+  conditions.
 
-== Functional Acceptance
+  == Functional Acceptance
 
-The reporting system shall demonstrate the ability to:
+  The reporting system shall demonstrate the ability to:
 
-- Collect report data from the PLC.
-- Preserve PLC-generated timestamps.
-- Store report data within Microsoft SQL Server.
-- Generate each supported report type.
-- Assign unique Report IDs.
-- Associate operator events with reports.
-- Associate QA annotations with reports.
-- Associate QA approvals with reports.
-- Search historical reports.
-- Export reports to PDF.
-- Print reports.
+  - Collect report data from the PLC.
+  - Preserve PLC-generated timestamps.
+  - Store report data within Microsoft SQL Server.
+  - Generate each supported report type.
+  - Assign unique Report IDs.
+  - Associate operator events with reports.
+  - Associate QA annotations with reports.
+  - Associate QA approvals with reports.
+  - Search historical reports.
+  - Export reports to PDF.
+  - Print reports.
 
-== Data Integrity
+  == Data Integrity
 
-Acceptance testing shall verify:
+  Acceptance testing shall verify:
 
-- No duplicate reports are generated.
-- No report records are lost.
-- No orphaned supporting records exist.
-- Foreign key relationships remain valid.
-- Report identifiers remain unique.
-- Historical data remains unchanged after approval.
+  - No duplicate reports are generated.
+  - No report records are lost.
+  - No orphaned supporting records exist.
+  - Foreign key relationships remain valid.
+  - Report identifiers remain unique.
+  - Historical data remains unchanged after approval.
 
-== QA Workflow
+  == QA Workflow
 
-Acceptance testing shall demonstrate:
+  Acceptance testing shall demonstrate:
 
-- Reports enter QA Review Pending.
-- QA Hold functions correctly.
-- QA Approved functions correctly.
-- QA annotations are retained.
-- Approval history is preserved.
-- Audit history remains complete.
+  - Reports enter QA Review Pending.
+  - QA Hold functions correctly.
+  - QA Approved functions correctly.
+  - QA annotations are retained.
+  - Approval history is preserved.
+  - Audit history remains complete.
 
-== Communication
+  == Communication
 
-Acceptance testing shall verify:
+  Acceptance testing shall verify:
 
-- PLC communication.
-- Ignition communication.
-- SQL Server communication.
-- Recovery after temporary communication failure.
-- Buffered record processing.
+  - PLC communication.
+  - Ignition communication.
+  - SQL Server communication.
+  - Recovery after temporary communication failure.
+  - Buffered record processing.
 
-Temporary communication interruptions shall not result in data loss.
+  Temporary communication interruptions shall not result in data loss.
 
-== Performance
+  == Performance
 
-The reporting system shall demonstrate acceptable performance under expected
-production loading.
+  The reporting system shall demonstrate acceptable performance under expected
+  production loading.
 
-Performance testing should verify:
+  Performance testing should verify:
 
-- Report generation time.
-- Historical search time.
-- Database response time.
-- Simultaneous user performance.
-- Recovery after gateway restart.
+  - Report generation time.
+  - Historical search time.
+  - Database response time.
+  - Simultaneous user performance.
+  - Recovery after gateway restart.
 
-== Security
+  == Security
 
-Acceptance testing shall verify:
+  Acceptance testing shall verify:
 
-- User authentication.
-- Role-based permissions.
-- Unauthorized access prevention.
-- Audit logging.
-- Administrative functions.
+  - User authentication.
+  - Role-based permissions.
+  - Unauthorized access prevention.
+  - Audit logging.
+  - Administrative functions.
 
-== Documentation
+  == Documentation
 
-The following documentation shall be complete before project acceptance:
+  The following documentation shall be complete before project acceptance:
 
-- Reporting Requirements Workbook
-- Functional Design Document
-- Factory Acceptance Test
-- Site Acceptance Test
-- Operator documentation
-- Administrator documentation
+  - Reporting Requirements Workbook
+  - Functional Design Document
+  - Factory Acceptance Test
+  - Site Acceptance Test
+  - Operator documentation
+  - Administrator documentation
 
-== Customer Acceptance
+  == Customer Acceptance
 
-Final project acceptance shall occur following:
+  Final project acceptance shall occur following:
 
-- Successful Factory Acceptance Test.
-- Successful Site Acceptance Test.
-- Resolution of agreed punch-list items.
-- Customer approval.
+  - Successful Factory Acceptance Test.
+  - Successful Site Acceptance Test.
+  - Resolution of agreed punch-list items.
+  - Customer approval.
 
-Acceptance indicates that the reporting system satisfies the functional design
-described within this document.
+  Acceptance indicates that the reporting system satisfies the functional design
+  described within this document.
 
-== Design Philosophy
+  == Design Philosophy
 
-Acceptance testing confirms that the implemented reporting solution fulfills the
-approved customer requirements while providing reliable operation,
-maintainability, and long-term supportability.
+  Acceptance testing confirms that the implemented reporting solution fulfills the
+  approved customer requirements while providing reliable operation,
+  maintainability, and long-term supportability.
+
+]
