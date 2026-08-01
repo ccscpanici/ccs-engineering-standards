@@ -221,3 +221,38 @@ Attach existing reports whenever possible.
     Stores the permanent QA approval history associated with completed reports.
   ],
 )
+
+== Network Switch
+
+#network-switch(
+  name: "Reporting Network Switch",
+  manufacturer: "Rockwell Automation",
+  model: "Stratix 5700",
+  firmware: "Current approved revision",
+  ip: "10.0.1.50",
+  network: "Plant Controls Network",
+  vlan: "Production",
+  managed: "Yes",
+
+  description: [
+    Managed industrial Ethernet switch providing connectivity between
+    the PLC, Ignition Gateway, SQL Server, and supporting infrastructure.
+  ],
+)
+
+== Historian
+
+#historian(
+  name: "Production Historian",
+  platform: "Ignition Tag Historian",
+  version: "8.3",
+  tag-provider: "Production",
+  retention: "7 Years",
+  storage: "Microsoft SQL Server",
+  redundancy: "Gateway Redundancy",
+
+  description: [
+    Stores historical process values used for troubleshooting,
+    trend review, production analysis, and supplemental report data.
+  ],
+)

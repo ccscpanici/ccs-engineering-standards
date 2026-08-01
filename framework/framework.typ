@@ -12,6 +12,8 @@
 #import "engineering/sql-server.typ": *
 #import "engineering/report-definition.typ": *
 #import "engineering/database-table.typ": *
+#import "engineering/network-switch.typ": *
+#import "engineering/historian.typ": *
 
 #import "layouts/cover.typ": *
 #import "layouts/document-info.typ": *
