@@ -256,3 +256,21 @@ Attach existing reports whenever possible.
     trend review, production analysis, and supplemental report data.
   ],
 )
+
+== Generic Information Panel
+
+#info-panel(
+  "Reporting Server",
+
+  (
+    ("Manufacturer", "Dell"),
+    ("Model", "PowerEdge"),
+    ("Operating System", "Windows Server"),
+    ("Purpose", "Ignition and reporting services"),
+  ),
+
+  description: [
+    Example of the generic information panel for an engineering object
+    that does not need a dedicated wrapper.
+  ],
+)
