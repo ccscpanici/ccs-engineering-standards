@@ -11,6 +11,7 @@
 #import "engineering/ignition-gateway.typ": *
 #import "engineering/sql-server.typ": *
 #import "engineering/report-definition.typ": *
+#import "engineering/database-table.typ": *
 
 #import "layouts/cover.typ": *
 #import "layouts/document-info.typ": *
