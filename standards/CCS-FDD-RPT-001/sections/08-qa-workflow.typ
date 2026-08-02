@@ -31,9 +31,12 @@
 
   Reports progress through the following QA states:
 
-  #qa-workflow()
+  #figure(
+    qa-workflow(),
+    caption: [QA Report review workflow],
+  ) <qa-review-workflow>
 
-  Each report shall always have one current QA status.
+  Each report shall always have one current QA status. The standard QA state progression is shown in @qa-review-workflow shown above.
 
   == QA Review Pending
 

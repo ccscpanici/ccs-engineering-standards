@@ -181,46 +181,51 @@ Attach existing reports whenever possible.
 
 == Database Table
 
-#database-table(
-  name: "QA_APPROVAL",
+== Database Table
 
-  columns: (
-    (
-      "ApprovalID",
-      "BIGINT",
-      "Primary key for the approval record.",
-    ),
-    (
-      "ReportID",
-      "BIGINT",
-      "Foreign key referencing the associated report.",
-    ),
-    (
-      "ApprovedBy",
-      "VARCHAR(100)",
-      "Authenticated user who performed the approval.",
-    ),
-    (
-      "ApprovedAt",
-      "DATETIME2",
-      "Date and time the approval was recorded.",
-    ),
-    (
-      "ApprovalStatus",
-      "INT",
-      "QA status recorded for the report.",
-    ),
-    (
-      "Comments",
-      "VARCHAR(MAX)",
-      "Optional approval comments.",
+#figure(
+  database-table(
+    name: "QA_APPROVAL",
+
+    columns: (
+      (
+        "ApprovalID",
+        "BIGINT",
+        "Primary key for the approval record.",
+      ),
+      (
+        "ReportID",
+        "BIGINT",
+        "Foreign key referencing the associated report.",
+      ),
+      (
+        "ApprovedBy",
+        "VARCHAR(100)",
+        "Authenticated user who performed the approval.",
+      ),
+      (
+        "ApprovedAt",
+        "DATETIME2",
+        "Date and time the approval was recorded.",
+      ),
+      (
+        "ApprovalStatus",
+        "INT",
+        "QA status recorded for the report.",
+      ),
+      (
+        "Comments",
+        "VARCHAR(MAX)",
+        "Optional approval comments.",
+      ),
     ),
   ),
 
-  purpose: [
-    Stores the permanent QA approval history associated with completed reports.
-  ],
-)
+  kind: table,
+  caption: [QA approval table definition],
+) <showcase-qa-approval-table>
+
+The schema example is shown in @showcase-qa-approval-table.
 
 == Network Switch
 

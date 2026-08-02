@@ -349,27 +349,41 @@ Creates a CCS-styled worksheet table.
 
 ## `database-table(...)`
 
-Creates a formatted database table definition.
+Creates a styled database schema table.
+
+The component renders the table itself. Wrap it in Typst's native `figure()`
+function when a caption, number, label, or cross-reference is required.
 
 ### Example
 
 ```typst
-#database-table(
-  name: "QA_APPROVAL",
+#figure(
+  database-table(
+    name: "QA_APPROVAL",
 
-  columns: (
-    (
-      "ApprovalID",
-      "BIGINT",
-      "Primary Key",
-    ),
-    (
-      "ReportID",
-      "BIGINT",
-      "Foreign Key",
+    columns: (
+      (
+        "ApprovalID",
+        "BIGINT",
+        "Primary key.",
+      ),
+      (
+        "ReportID",
+        "BIGINT",
+        "Associated report identifier.",
+      ),
     ),
   ),
-)
+
+  kind: table,
+  caption: [QA approval table definition],
+) <qa-approval-table>
+```
+
+Reference it elsewhere with:
+
+```typst
+See @qa-approval-table.
 ```
 
 ---

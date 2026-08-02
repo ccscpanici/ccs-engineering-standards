@@ -13,6 +13,9 @@
 #import "layouts/document-info.typ": *
 
 #let ccs-standard(document, body) = {
+  
+  set heading(numbering: "1.")
+
   show heading.where(level: 1): it => {
     set text(
       size: 22pt,

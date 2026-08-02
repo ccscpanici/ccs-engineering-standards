@@ -5,6 +5,7 @@
 #import "components/forms.typ": *
 #import "components/ccs-tables.typ": *
 #import "components/diagrams.typ": *
+#import "components/references.typ": *
 
 #import "engineering/engineering.typ": *
 #import "engineering/controller.typ": *

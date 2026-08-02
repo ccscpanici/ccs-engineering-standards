@@ -1,3 +1,4 @@
+#import "../../../framework/framework.typ": controller
 #let plc-interface() = [
     
   = PLC Interface
@@ -12,6 +13,20 @@
 
   The reporting system shall not calculate process values that are already
   available within the PLC.
+
+  #controller(
+    name: "Primary Reporting PLC",
+    model: "To Be Determined",
+    firmware: "To Be Determined",
+    network: "EtherNet/IP",
+    ip: "To Be Determined",
+
+    description: [
+      Primary process controller responsible for report initiation,
+      process-data collection, event timestamping, record buffering,
+      and communication with the Ignition Gateway.
+      ],
+  )
 
   == PLC Responsibilities
 

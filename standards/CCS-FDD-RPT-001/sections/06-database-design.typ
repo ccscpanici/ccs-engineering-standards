@@ -1,6 +1,7 @@
+#import "../../../framework/framework.typ": sql-server, database-table
 #let database-design() = [
     
-  = Database Design
+  = Database Design <database-design>
 
   == Overview
 
@@ -12,7 +13,66 @@
   historical report retrieval.
 
   The database shall preserve complete traceability from the originating PLC
-  events through final QA approval.
+  events through final QA approval. The QA approval record structure is summarized in @qa-approval-table
+  shown below.
+
+  #sql-server(
+    name: "Reporting Database Server",
+    version: "To Be Determined",
+    database: "Reporting",
+    authentication: "To Be Determined",
+    backup: "Per customer IT standards",
+
+    description: [
+      Microsoft SQL Server instance responsible for permanent report storage,
+      relational integrity, stored procedures, QA records, historical retrieval,
+      and backup and recovery.
+    ],
+  )
+  #figure(
+    database-table(
+      name: "QA_APPROVAL",
+
+      columns: (
+        (
+          "ApprovalID",
+          "BIGINT",
+          "Primary key for the approval record.",
+        ),
+        (
+          "ReportID",
+          "BIGINT",
+          "Foreign key referencing the associated report.",
+        ),
+        (
+          "ApprovedBy",
+          "VARCHAR(100)",
+          "Authenticated user who performed the approval.",
+        ),
+        (
+          "ApprovedAt",
+          "DATETIME2",
+          "Date and time the approval was recorded.",
+        ),
+        (
+          "ApprovalStatus",
+          "INT",
+          "QA status recorded for the report.",
+        ),
+        (
+          "Comments",
+          "VARCHAR(MAX)",
+          "Optional approval comments.",
+        ),
+      ),
+    ),
+
+    kind: table,
+    caption: [
+      QA approval table definition. This table stores the permanent QA approval
+      history associated with completed reports.
+    ],
+  ) <qa-approval-table>
 
   == Design Objectives
 

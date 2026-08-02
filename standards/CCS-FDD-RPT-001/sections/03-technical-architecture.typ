@@ -11,9 +11,12 @@
 
   Each layer communicates only with adjacent layers, minimizing coupling and
   allowing individual components to be modified without affecting the entire
-  system.
+  system. The major system layers and data flow are shown in @reporting-architecture below.
 
-  #reporting-system()
+  #figure(
+    reporting-system(),
+    caption: [High-level reporting system architecture],
+  ) <reporting-architecture>
 
   == Architecture Layers
 

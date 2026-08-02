@@ -1,3 +1,4 @@
+#import "../../../framework/framework.typ": ignition-gateway
 #let ignition-design() = [
     
   = Ignition Gateway Design
@@ -13,6 +14,22 @@
 
   The Gateway shall isolate the PLC from database and reporting functions,
   allowing each system to evolve independently.
+
+  #ignition-gateway(
+    name: "Primary Ignition Gateway",
+    version: "To Be Determined",
+    redundancy: "To Be Determined",
+    tag-provider: "Production",
+    database: "Reporting",
+
+    description: [
+      Primary Ignition Gateway responsible for PLC data acquisition,
+      transaction buffering, SQL record creation, report generation,
+      operator interfaces, and QA workflow services.
+      ],
+  )
+
+  The database schema and stored-procedure responsibilities are defined in @database-design.
 
   == Gateway Responsibilities
 
