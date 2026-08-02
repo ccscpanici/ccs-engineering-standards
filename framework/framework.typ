@@ -8,6 +8,7 @@
 
 #import "diagrams/architecture.typ": *
 #import "diagrams/flow.typ": *
+#import "diagrams/state.typ": *
 #import "diagrams/workflow.typ": *
 
 #import "engineering/controller.typ": *

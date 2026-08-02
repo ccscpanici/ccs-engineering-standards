@@ -1,59 +1,21 @@
-#import "../styles/colors.typ": *
-#import "flow.typ": flow-node
+#import "state.typ": state-diagram
 
-#let qa-workflow() = [
-  #align(center)[
-    #stack(
-      dir: ttb,
-      spacing: 10pt,
+#let qa-workflow(
+    pending: "QA Review Pending",
+    hold: "QA Hold",
+    approved: "QA Approved",
 
-      flow-node("QA Review Pending"),
+    review-to-hold: "Place report on hold",
+    review-to-approved: "Approve report",
+    hold-to-review: "Return for QA review",
+    hold-to-approved: "Approve after corrective action",
+  ) = state-diagram(
+    pending: pending,
+    hold: hold,
+    approved: approved,
 
-      [
-        #align(center)[
-          #text(
-            size: 22pt,
-            weight: "bold",
-            fill: ccs-orange,
-          )[↙      ↘]
-        ]
-      ],
-
-      grid(
-        columns: (1fr, 1fr),
-        gutter: 0.6in,
-
-        flow-node("QA Hold"),
-        flow-node("QA Approved"),
-      ),
-
-      [
-        #align(center)[
-          #text(
-            size: 9pt,
-            style: "italic",
-            fill: ccs-dark,
-          )[Corrective actions completed]
-        ]
-      ],
-
-      [
-        #align(center)[
-          #text(
-            size: 22pt,
-            weight: "bold",
-            fill: ccs-orange,
-          )[↙      ↘]
-        ]
-      ],
-
-      grid(
-        columns: (1fr, 1fr),
-        gutter: 0.6in,
-
-        flow-node("QA Review Pending"),
-        flow-node("QA Approved"),
-      ),
-    )
-  ]
-]
+    review-to-hold: review-to-hold,
+    review-to-approved: review-to-approved,
+    hold-to-review: hold-to-review,
+    hold-to-approved: hold-to-approved,
+  )
