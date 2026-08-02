@@ -1,3 +1,5 @@
+#import "@preview/cetz:0.5.2": canvas, draw
+
 #import "theme.typ": ccs-standard
 
 #import "components/callouts.typ": *
@@ -6,10 +8,7 @@
 #import "components/ccs-tables.typ": *
 #import "components/references.typ": *
 
-#import "diagrams/architecture.typ": *
-#import "diagrams/flow.typ": *
-#import "diagrams/state.typ": *
-#import "diagrams/workflow.typ": *
+#import "graph/graph.typ": *
 
 #import "engineering/controller.typ": *
 #import "engineering/ignition-gateway.typ": *
