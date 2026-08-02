@@ -7,8 +7,8 @@
   project: "Engineering Publishing Framework",
   facility: "Appleton, WI",
   author: "Chris Panici",
-  revision: "0.3.1",
-  date: "July 31, 2026",
+  revision: "0.5.0-dev",
+  date: "August 2nd, 2026",
 
   revisions: (
     (
@@ -22,6 +22,8 @@
 
 #show: body => ccs-standard(document, body)
 = CCS Engineering Publishing Framework
+
+#outline()
 
 This document demonstrates every reusable framework component.
 
@@ -45,8 +47,6 @@ Attach existing reports whenever possible.
 
 = Forms
 
-#import "../framework/components/forms.typ": *
-
 #field("Customer")
 
 #v(0.2in)
@@ -64,8 +64,6 @@ Attach existing reports whenever possible.
 #pagebreak()
 
 = Checklists
-
-#import "../framework/components/checklist.typ": *
 
 #checklist(
   (
@@ -85,8 +83,6 @@ Attach existing reports whenever possible.
 
 = Tables
 
-#import "../framework/components/ccs-tables.typ": *
-
 #worksheet-table(
   (1.0in, 2.2in, 1.2in, 1fr),
 
@@ -104,17 +100,29 @@ Attach existing reports whenever possible.
   ),
 )
 
-= Engineering Diagrams
+#pagebreak()
 
-#report-flow(
-  (
-    "PLC",
-    "Ignition",
-    "SQL Server",
-    "PDF Report",
-  ),
-  caption: "High-level reporting data flow",
-)
+= Engineering Components
+
+== Engineering Diagrams
+
+#figure(
+  reporting-system(),
+  caption: [High-level reporting system architecture],
+) <showcase-reporting-architecture>
+
+The reporting architecture is shown in
+@showcase-reporting-architecture.
+
+== QA Workflow
+
+#figure(
+  qa-workflow(),
+  caption: [QA report review workflow],
+) <showcase-qa-workflow>
+
+The QA workflow is shown in
+@showcase-qa-workflow.
 
 == Controller Information
 
@@ -178,8 +186,6 @@ Attach existing reports whenever possible.
     operator events, QA annotations, and final approval status.
   ],
 )
-
-== Database Table
 
 == Database Table
 
@@ -279,3 +285,11 @@ The schema example is shown in @showcase-qa-approval-table.
     that does not need a dedicated wrapper.
   ],
 )
+
+= Cross reference
+
+See @showcase-reporting-architecture.
+
+See @showcase-qa-workflow.
+
+See @showcase-qa-approval-table.

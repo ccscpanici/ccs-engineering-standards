@@ -4,10 +4,12 @@
 #import "components/checklist.typ": *
 #import "components/forms.typ": *
 #import "components/ccs-tables.typ": *
-#import "components/diagrams.typ": *
 #import "components/references.typ": *
 
-#import "engineering/engineering.typ": *
+#import "diagrams/architecture.typ": *
+#import "diagrams/flow.typ": *
+#import "diagrams/workflow.typ": *
+
 #import "engineering/controller.typ": *
 #import "engineering/ignition-gateway.typ": *
 #import "engineering/sql-server.typ": *

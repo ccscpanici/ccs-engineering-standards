@@ -33,7 +33,7 @@
 
   #figure(
     qa-workflow(),
-    caption: [QA Report review workflow],
+    caption: [QA report review workflow],
   ) <qa-review-workflow>
 
   Each report shall always have one current QA status. The standard QA state progression is shown in @qa-review-workflow shown above.
