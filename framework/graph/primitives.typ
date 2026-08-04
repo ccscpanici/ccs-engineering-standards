@@ -68,18 +68,21 @@
   label,
   anchor: "center",
   width: 1.75in,
+  color: ccs-dark,
+  background: white,
 ) = {
   cetz.draw.content(
     position,
     box(
       width: width,
-      inset: 2pt,
+      fill: background,
+      inset: (x: 4pt, y: 2pt),
     )[
       #align(center)[
         #text(
           size: 8.5pt,
           style: "italic",
-          fill: ccs-orange,
+          fill: color,
         )[
           #label
         ]
@@ -113,6 +116,7 @@
   label-position: none,
   label-anchor: "center",
   label-width: 1.75in,
+  label-color: ccs-dark,
   stroke: graph-edge-stroke,
   mark: graph-edge-mark,
 ) = {
@@ -130,6 +134,7 @@
       label,
       anchor: label-anchor,
       width: label-width,
+      color: label-color,
     )
   }
 }

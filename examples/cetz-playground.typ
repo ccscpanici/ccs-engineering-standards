@@ -6,4 +6,6 @@
   margin: 0.5in,
 )
 
+= CeTZ Graph Playground
+
 #qa-workflow()
