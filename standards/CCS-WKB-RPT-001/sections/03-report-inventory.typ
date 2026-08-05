@@ -1,6 +1,4 @@
-#import "../../../framework/components/ccs-tables.typ": worksheet-table
-#import "../../../framework/components/forms.typ": write-space
-#import "../../../framework/components/checklist.typ": checklist
+#import "../../../framework/framework.typ": worksheet-table, write-space, checklist
 
 #let report-inventory() = [
     
@@ -112,5 +110,5 @@
   == Engineering Notes
 
   #write-space(height: 1.5in)
-
+  #pagebreak()
 ]

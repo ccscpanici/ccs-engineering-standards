@@ -1,5 +1,4 @@
-#import "../../../framework/components/forms.typ": write-space
-#import "../../../framework/components/checklist.typ": checklist
+#import "../../../framework/framework.typ": write-space, checklist
 
 #let report-specifications() = [
     
@@ -79,9 +78,14 @@
   == Calculations
 
   Does the report require calculated values?
-
-  - [ ] No
-  - [ ] Yes
+ 
+ #checklist(
+    (
+      "No",
+      "Yes"
+    ),
+    columns: 2
+  )
 
   If yes, describe the required calculations.
 
@@ -177,5 +181,6 @@
   == Engineering Notes
 
   #write-space(height: 1.25in)
+  #pagebreak()
 
 ]
