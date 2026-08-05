@@ -32,7 +32,10 @@
   Reports progress through the following QA states:
 
   #figure(
-    qa-workflow(),
+    [
+      #qa-workflow()
+      #v(6pt)
+    ],
     caption: [QA report review workflow],
   ) <qa-review-workflow>
 
